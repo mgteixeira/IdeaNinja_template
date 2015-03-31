@@ -1,0 +1,19 @@
+footer {
+  @include container(100%);
+  background: lighten($dark, 20);
+  padding: 20px 0;
+  #socialmedia {
+    text-align: center;
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        padding: 0 20px;
+        img {
+          width: 64px;
+          @include border-radius(50%);
+        } // img
+      } //li
+    } //ul
+  } //social
+}//footer
