@@ -1,6 +1,6 @@
 header {
   .fullheight {
-    @include backImage('/images/main/homesplash.jpg');
+    @include backImage('../images/main/homesplash.jpg');
 
     @include display-flex();
     @include align-items(center);

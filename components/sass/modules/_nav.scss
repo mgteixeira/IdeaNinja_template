@@ -46,11 +46,11 @@ header #nav {
           background-repeat: no-repeat;
           background-position: 2px;
 
-          &.tools { background-image: url('/images/icons/tools.png');}
-          &.resources { background-image: url('/images/icons/resources.png');}
-          &.opinions { background-image: url('/images/icons/opinions.png');}
-          &.contributors { background-image: url('/images/icons/contributors.png');}
-          &.contactus { background-image: url('/images/icons/contactus_white.png');}
+          &.tools { background-image: url('../images/icons/tools.png');}
+          &.resources { background-image: url('../images/icons/resources.png');}
+          &.opinions { background-image: url('../images/icons/opinions.png');}
+          &.contributors { background-image: url('../images/icons/contributors.png');}
+          &.contactus { background-image: url('../images/icons/contactus_white.png');}
 
           &:hover {
             background-color: $navHover;
