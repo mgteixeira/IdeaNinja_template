@@ -4,7 +4,40 @@
     color: $red;
     padding: 10px 0;
   } //headings
+      #articleblock{
+          
+        img{
+          padding-top: 30px; 
+          max-width: 80px;
+          padding-right: 10px;
+          @include span(2);
+        }//img
 
+        #articlebody{
+          padding-top: 10px; 
+          
+          p{
+          text-align: justify;
+          font-weight: $normal;
+          line-height:200%;
+          }//p
+
+          #articleimg{
+            padding:20px;
+            max-width: 100%;
+            @include span(12);
+          }//articleimg
+  
+          ul {
+            list-style-position: inside;
+            list-style:disc;
+            padding-left: 30px; 
+          }//ul
+
+        }//articlebody
+       
+
+      }//articleblock
       #toprow {
           display: inline-block;
           @include span (12);
@@ -12,11 +45,12 @@
         #topPicks {
           ul {
             list-style-position: inside;
-            font-size: 1.5em;
+            font-size: 1em;
             line-height: 1.5em;
             line-height:200%;
             list-style-image: url(../images/icons/awardbullet_black.png);
             padding-left: 15px; 
+            padding-top: 10px; 
           }//ul
         }//topPicks
     }//toprow
