@@ -47,3 +47,6 @@ Temporary Items
 
 #.Sass Cache
 /.sass-cache/*
+
+#node-modules
+/node-modules/*
