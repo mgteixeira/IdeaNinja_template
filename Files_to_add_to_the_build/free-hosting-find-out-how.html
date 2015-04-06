@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Idea Ninja</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+  <header id="intro">
+    </article>
+    <nav id="nav">
+      <div class="navbar">
+        <div class="brand"><a href="index.html#bodyhome">Idea <span>Ninja</span></a></div>
+        <ul>
+          <li><a class="icon tools" href="tools.html"><span>Tools</span></a></li>
+          <li><a class="icon resources" href="resources.html"><span>Resources</span></a></li>
+          <li><a class="icon opinions" href="opinions.html"><span>Opinions</span></a></li>
+          <li><a class="icon contributors" href="contributors.html"><span>Contributors</span></a></li>
+          <li><a class="icon contactus" href="contactus.html"><span>Contact Us</span></a></li>
+        </ul>
+      </div><!-- navbar -->
+    </nav>
+  </header>
+<main id="wrapper">
+  <div class="scene" id="bodyhome">
+    <article id="articleblock">
+      <h1>Free Hosting! Find out how</h1>
+    <div>
+      <img src="images/avatars/MTavatar.jpeg"><br>
+      <p id="author">Author: Miguel Teixeira <br>
+      April 2015 <br>
+      Tags: Resources, Hosting </p>
+    </div>
+    <div id="articlebody">
+      <p>Are you spending money on hosting ? No more! You can use github to host your site for free right now. Read this article to learn how.</p>
+      <p>So you created a website. Now is time to roll it out. This is what you need to do before following these instructions:</p>
+      <ul>
+        <li>Have a domain </li>
+        <li>Have a website built</li>
+        <li>Register on Github.com </li>
+      </ul>
+      <h2>Step 1</h2>
+      <p>Create a repository on Github with your website. Note that your branch now is called Master.</p>
+      <h2>Step 2</h2>
+      <p>Create a new branched named gh-pages.</p>
+      <h2>Step 3</h2>
+      <p>Deploy your website. Note you should deploy your DOM files and folders.</p>
+      <h2>Step 4</h2>
+      <p>Test your website, through the following URL [username].github.io/[repository name]</p>
+      <h2>Step 5</h2>
+      <p>Add a File named CNAME (all Caps and no extension) and in that file writedown your domain.</p>
+      <h2>Step 6</h2>
+      <div>
+      <p>Go to your domain and edit the Zone file or change it to this:</p>
+      <img src="images/articles/free-hosting/zonefile.png" id="articleimg">
+      <p>or this: <br>
+      @ 10800 IN A 192.30.252.153<br>
+      @ 10800 IN A 192.30.252.154<br>
+      www 10800 IN CNAME @<br></p>
+      </div><!--steo6-->
+      <h2>Step 7</h2>
+      <p>Make sure that your domain is using the zone file you edited/created.</p>
+      <p>Note: it may take a few hours before the website is available. These new settings need to be propagated through the ISP, so don't worry if you cannot see your site right after you completed these 7 steps.</p>
+          </div><!--articlebody-->
+    </article>
+  </div><!-- bodyhome -->
+</main>
+ <footer class="scene">
+  <article class="content">
+    <div id="socialmedia">
+      <ul class="group">
+        <li><a href="https://twitter.com/idea_ninja"><img class="icon" src="images/socialmedia/twitter.png" alt="icon for twitter" /></a></li>
+        <li><a href="https://www.facebook.com/IdeaNinja.io"><img class="icon" src="images/socialmedia/facebook.png" alt="icon for facebook" /></a></li>
+<!--        <li><a href="http://www.youtube.com"><img class="icon" src="images/socialmedia/youtube.png" alt="icon for youtube" /></a></li>
+       <li><a href="https://linkedin.com"><img class="icon" src="images/socialmedia/linkedin.png" alt="icon for linkedin" /></a></li> -->
+      </ul>      
+    </div>
+ 
+  </article>
+</footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
