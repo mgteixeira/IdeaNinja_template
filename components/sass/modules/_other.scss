@@ -104,6 +104,7 @@
     text-align: justify;
     border-top: 1px solid $red;
     border-bottom: 1px solid $red;
+    font-size: 80%; 
     
     img{
       max-width: 80px;
@@ -133,6 +134,10 @@
         line-height: 140%;
         @include span(8);
       } //p
+
+          #contact_form{
+        @include span(8);   
+      }//coontact_form
       
       #topPicks {
           background: $red;
@@ -174,5 +179,5 @@
     }
   } //breakpoint
 
-
 } //bodyhome
+
