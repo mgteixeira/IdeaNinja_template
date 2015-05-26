@@ -8,7 +8,11 @@ var gulp = require('gulp'),
     minifyHTML = require('gulp-minify-html'),
     concat = require('gulp-concat');
     path = require('path');
+    save = require('gulp-save');
+    sitemap = require('gulp-sitemap');
+ 
 
+gulp.task('default', ['clean']);
 var env,
     jsSources,
     sassSources,
@@ -16,7 +20,7 @@ var env,
     outputDir,
     sassStyle;
 
-env = 'development';
+env = 'production';
 
 if (env==='development') {
   outputDir = 'builds/development/';
@@ -79,10 +83,27 @@ gulp.task('html', function() {
     .pipe(connect.reload())
 });
 
+//create Sitemap
+
+gulp.task('sitemap', function () {
+    gulp.src('builds/development/*.html')
+        .pipe(sitemap({
+            siteUrl: 'http://ideaninja.io'
+        }))
+        .pipe(gulp.dest('builds/development/'));
+});
+
 // Copy images to production
 gulp.task('move', function() {
   gulp.src('builds/development/images/**/*.*')
   .pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
 });
 
-gulp.task('default', ['watch', 'html', 'js', 'compass', 'move', 'connect']);
+//copy sitemap to production
+gulp.task('move', function() {
+  gulp.src('builds/development/*.xml')
+  .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
+});
+
+
+gulp.task('default', ['watch', 'html', 'js', 'compass', 'sitemap', 'move', 'connect']);
