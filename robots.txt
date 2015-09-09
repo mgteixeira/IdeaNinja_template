@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /contactus.html
+Disallow: cgi-bin/
