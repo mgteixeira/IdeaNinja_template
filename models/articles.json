@@ -5,7 +5,8 @@
 		"tags": [ "Mentorship", "learning"],
 		"description": "The challenge of creating a company can be daunting. Having the right skills you need to grow your startup is critical. Having Mentors in those areas will make you go a long way.",
 		"image": "images/articles/mentors-need/free_advice.jpg",
-		"href":  "mentors_almost_everything_you_need.html"
+		"href":  "mentors_almost_everything_you_need.html",
+		"service": "_pd_banner.ejs"
 	},
 	"a23":  {
 		"title": "Free Hosting! Find out how",
@@ -13,7 +14,8 @@
 		"tags": [ "Resources", "Hosting"],
 		"description": "Driving traffic to your website is probably one of the biggest Marketing challenges you have on your startup to-do list. Writing articles can go a long way.",
 		"image": "images/articles/free-hosting/zonefile.jpg",
-		"href":  "free-hosting-find-out-how.html"
+		"href":  "free-hosting-find-out-how.html",
+		"service": "_pd_banner.ejs"
 	},
 	"a22":  {
 		"title": "Improve your website design with free photos",
@@ -21,7 +23,8 @@
 		"tags": [ "Resources", "webdesign", "photos"],
 		"description": "We came up with a list of the top 10 totally free photo sites that you can use to improve your website design.",
 		"image": "images/articles/howto-drive-traffic-seo/write_article.jpg",
-		"href":  "/images/icons/default.png"
+		"href":  "/images/icons/default.png",
+		"service": "_mp_banner.ejs"
 	},
 	"a21":  {
 		"title": "Website performance and why should you use a CDN",
@@ -29,7 +32,8 @@
 		"tags": [ "Website", "performance", "CDN", "hosting"],
 		"description": "Is your startup spending a lot of money on hosting or is your site sluggish? Learn why using a CDN might be the choice for you.",
 		"image": "images/articles/CDN-performance/how_cdn_works.jpg",
-		"href":  "performance-why-use-CDN.html"
+		"href":  "performance-why-use-CDN.html",
+		"service": "_pd_banner.ejs"
 	},
 	"a20":  {
 		"title": "How to drive traffic to your website - SEO",
@@ -37,7 +41,8 @@
 		"tags": [ "Marketing", "traffic", "SEO", "website"],
 		"description": "Driving traffic to your website is probably one of the biggest Marketing challenges you have on your startup to-do list. Writing articles can go a long way.",
 		"image": "images/articles/howto-drive-traffic-seo/write_article.jpg",
-		"href":  "How-to-drive-traffic-to-your-website-SEO.html"
+		"href":  "How-to-drive-traffic-to-your-website-SEO.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a19":  {
 		"title": "How to write an article for the web",
@@ -45,7 +50,8 @@
 		"tags": [ "Content", "article", "SEO", "website"],
 		"description": "So you want to write an article for the web. There are lots of specifics. We will explain how you should do it.",
 		"image": "images/articles/Howto-write-article/papper-bin.jpg",
-		"href":  "How-to-write-article-for-the-web.html"
+		"href":  "How-to-write-article-for-the-web.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a18":  {
 		"title": "Entry barriers for online startup",
@@ -53,7 +59,8 @@
 		"tags": [ "Entry-barriers", "SEO", "strategy", "startup"],
 		"description": "It is often said that there are low entry barriers for online startups. Is this true or just another myth?",
 		"image": "images/articles/entry-barriers/barriers.jpg",
-		"href":  "entry-barriers-online-startup.html"
+		"href":  "entry-barriers-online-startup.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a17":  {
 		"title": "How to value Business Ideas",
@@ -61,7 +68,8 @@
 		"tags": [ "Market", "Competitive-advantage", "Barriers-to-Enter", "Skills"],
 		"description": "Every day you have ideas, most of those ideas never become a business. And the main question you should ask yourself when faced with your ideas is: is this a good idea for starting a business?",
 		"image": "images/articles/value-idea/value_idea_photo.jpg",
-		"href":  "bhow_to_value_business_idea.html"
+		"href":  "how_to_value_business_idea.html",
+		"service": "_pd_banner.ejs"
 	},
 	"a16":  {
 		"title": "Basics of Accounting for entrepreneurs",
@@ -69,7 +77,8 @@
 		"tags": [ "Marketing", "traffic", "SEO", "website"],
 		"description": "Driving traffic to your website (How to drive traffic to your website - SEO) is probably one of the biggest Marketing challenges you have on your startup to-do list. Writing articles (How to write an article for the web) can go a long way. Besides that, accounting for entrepreneurs is a very important topic to be sure that your company will not go bankrupt",
 		"image": "images/articles/accounting-entrepreneurs/balancesheet.jpg",
-		"href":  "basics_of_accounting_for_entrepreneurs.html"
+		"href":  "basics_of_accounting_for_entrepreneurs.html",
+		"service": "_bmp_banner.ejs"
 	},
 	"a15":  {
 		"title": "Perfect Pitch",
@@ -77,7 +86,8 @@
 		"tags": ["Pitch", "sales", "Marketing", "business development", "startup", "entrepreneur", "raising capital"],
 		"description": "Every day we sell. A perfect pitch is the ultimate selling weapon. By email, in the elevator, on a telephone, on a presentation, on a meeting or in a social interaction. Turn your efforts into success stories by improving your pitch. In this article we will take a look into successful product pitch examples.",
 		"image": "images/articles/perfect_pitch/perfect_pitch.jpg",
-		"href":  "perfect_pitch.html"
+		"href":  "perfect_pitch.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a14":  {
 		"title": "How to improve your Facebook post's reach",
@@ -85,7 +95,8 @@
 		"tags": ["social-media", "marketing", "edgerank"],
 		"description": "Facebook uses an algorithm to prioritize what is posted in the news feed. If you want to know what is post reach on Facebook and improve your startup's Facebook page reach, you should look into what edgerank formula is all about.",
 		"image": "images/articles/improve_post_reach/Edgerank_formula.png",
-		"href":  "how_improve_facebook_post_reach.html"
+		"href":  "how_improve_facebook_post_reach.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a13":  {
 		"title": "Basics of SEO",
@@ -93,7 +104,8 @@
 		"tags": ["SEO", "Marketing", "Website"],
 		"description": "When you create a website, you want to have the most page views you can get. Therefore, appearing on one of the first positions of Google's search results page is key to generate lots of free traffic to your website.",
 		"image": "/images/articles/basics_seo/crtl.jpg",
-		"href":  "basics_seo.html"
+		"href":  "basics_seo.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a12":  {
 		"title": "Books for entrepreneurs - Curated list plus video",
@@ -101,7 +113,8 @@
 		"tags": ["Curated List", "Startup", "books", "approach", "strategy", "talks", "videos"],
 		"description": "We, at IdeaNinja, have created an entrepreneur book curated list with videos that summarized the books, so that you can make the most of your time or help you select the next book to read.",
 		"image": "/images/articles/books_list/books.jpg",
-		"href":  "books_for_entrepreneurs_curated_list_plus_video.html"
+		"href":  "books_for_entrepreneurs_curated_list_plus_video.html",
+		"service": "_pd_banner.ejs"
 	},
 	"a11":  {
 		"title": "How to make easy videos",
@@ -109,7 +122,8 @@
 		"tags": ["Videos", "how to's", "content", "website", "startup"],
 		"description": "Video is one of the best ways to communicate. In this article we will give you some advice about how to make easy videos.",
 		"image": "/images/articles/easy-video/filming_video.jpg",
-		"href":  "how-to-make-easy-videos.html"
+		"href":  "how-to-make-easy-videos.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a10":  {
 		"title": "How to manage a Youtube channel",
@@ -117,7 +131,8 @@
 		"tags": ["Youtube", "channel", "content", "social media", "startup"],
 		"description": "Nowadays, more and more people/companies have a channel on youtube where they complement their websites or blogs. Over a billion users use this social network to interact with their target audience.",
 		"image": "/images/articles/youtube_channel/youtube.jpg",
-		"href":  "how_to_manage_youtube_channel.html"
+		"href":  "how_to_manage_youtube_channel.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a9":  {
 		"title": "Media and press kit: how to for startups",
@@ -125,7 +140,8 @@
 		"tags": ["media kit", "press kit", "journalists", "social media"],
 		"description": "Getting your startup covered by the media is very important. The press helps publicize your product, services or brand, however it can also damage the reputation of a brand. We will explain how and why you should have both Media and Press Kit.",
 		"image": "/images/articles/media-press-kit/business.jpg",
-		"href":  "press-media-kit.html"
+		"href":  "press-media-kit.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a8":  {
 		"title": "Motivation types",
@@ -133,7 +149,8 @@
 		"tags": [ "motivation", "need theory", "employees", "customers", "stakeholder"],
 		"description": "Everyone has something that motivates them, both personally and professionally. In this article will explain Need Theory. This theory was proposed by psychologist David McClelland, and will help you better understand employees, customers and other stakeholder’s motivations.",
 		"image": "/images/articles/motivation-types/motivation.jpg",
-		"href": "motivation-types.html"
+		"href": "motivation-types.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a7":  {
 		"title": "Market Life Cycle",
@@ -141,7 +158,8 @@
 		"tags": ["market", "cycle", "startup", "stages", "strategy"],
 		"description": "The markets evolve through several stages. And in each stage, you should use a different strategy. Knowing how to identify the stage the market is in, is key to define the right strategy.",
 		"image": "/images/articles/life-cycle/market-cycle.png",
-		"href": "market-life-cycle.html"
+		"href": "market-life-cycle.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a6":  {
 		"title": "Influencers - The key to Word of Mouth",
@@ -149,7 +167,8 @@
 		"tags": ["Influencers", "Word of Mouth", "Marketing"],
 		"description": "Who are influencers and how their impact your business? Take a journey into the world of Word of Mouth strategy and learn how to start an epidemic.",
 		"image": "/images/articles/influencers/word-of-mouth.jpg",
-		"href": "influencers_word_of_mouth.html"
+		"href": "influencers_word_of_mouth.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a5":  {
 		"title": "Cost Accounting for Entrepreneurs",
@@ -157,7 +176,8 @@
 		"tags": ["costaccounting", "decisionmaking", "howto"],
 		"description": "In this article we want to show you how simple and useful cost accounting can be, and provide you all the necessary information to make you capable of understanding your own company numbers. Few people start a business because they are good with numbers. In fact, the terms “accounting” and “financial analysis” tend to create headaches on many business owners. We will make cost accounting accessible for everyone.",
 		"image": "images/articles/cost_accounting/cost_accounting.jpg",
-		"href": "cost_accounting.html"
+		"href": "cost_accounting.html",
+		"service": "_bmp_banner.ejs"
 	},
 	"a4":  {
 		"title": "Social Media Growth Hacking",
@@ -165,7 +185,8 @@
 		"tags": ["socialmedia", "growthhacking", "reach"],
 		"description": "Do you want to grow your business fast and cheap ? Then Growth Hacking might be what you are looking for. In this article we will explore the best social media practices you can have along with some hacks to help you pierce through competition.",
 		"image": "images/articles/growth_hacking/growth_hacking.jpg",
-		"href": "growth_hacking.html"
+		"href": "growth_hacking.html",
+		"service": "_mp_banner.ejs"
 	},
 	"a3":  {
 		"title": "Guide to Prototyping",
@@ -173,7 +194,8 @@
 		"tags": ["Prototype", "lean", "product", "tunning"],
 		"description": "When developing a product or service you can incur in serious costs and very large hours of work. And then you finally discover that the market wants a different taste of your product... That is a really expensive lesson to learn. But what if you had built a prototype and came to the same conclusions, that would have been much cheaper and less time consuming process.",
 		"image": "images/articles/prototyping/prototyping.jpg",
-		"href": "prototyping.html"
+		"href": "prototyping.html",
+		"service": "_pd_banner.ejs"
 	},
 	"a2":  {
 		"title": "Lean Product Testing",
@@ -181,7 +203,8 @@
 		"tags": ["Fail", "Startup", "Challenges", "Product", "Market", "HR"],
 		"description": "The number one reason why startups fail is the lack of product market fit. Having a Lean methodology to test and tune your product, will increase your chances for success. Starting a company is risky, that’s inevitable. Eric Ries’ The Lean Startup book offers a scientific methodology that guide startups in an environment of extreme uncertainty. It makes them move faster, reduce their investment or working time, and consequently, the risk associated with it.",
 		"image": "/images/articles/lean-product/lean-methodology.jpg",
-		"href": "lean_product_testing.html"
+		"href": "lean_product_testing.html",
+		"service": "_pd_banner.ejs"
 	},
 	"a1":  {
 		"title": "Reasons why startups fail",
@@ -189,6 +212,7 @@
 		"tags": ["Fail", "Startup", "Challenges", "Product", "Market", "HR"],
 		"description": "In this article we will take a look into the main reasons why startups fail and dig deep into understanding the challenges and hurdles that startups face.",
 		"image": "images/articles/reasons_fail/startups_fail.jpg",
-		"href": "reasons_why_startups_fail.html"
+		"href": "reasons_why_startups_fail.html",
+		"service": "_pd_banner.ejs"
 	}
 }
