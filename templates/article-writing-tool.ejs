@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Article Writer Tool | Idea Ninja</title>
+        <meta name="description" content="This tool will help you write for the web. We have embeded in this tool rules to make your article ,compliant with best practices."/>
+
+        <link rel="canonical" href="https://ideaninja.io/article-writing-tool.html">
+        <meta property="og:title" content="Article Writer Tool | Idea Ninja"/>
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="This tool will help you write for the web. We have embedded in this tool rules to make your article ,compliant with best practices."/>
+        <meta property="og:url" content="https://ideaninja.io/article-writing-tool.html"/>
+        <meta property="og:image" content="https://ideaninja.io/images/icons/default.png"/>
+        <%- include partials/_og_partial.ejs %>
+
+        <link rel="stylesheet" href="css/style.css"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <%- include partials/_googleanalytics.ejs %>
+        <%- include partials/_favicon.ejs %>
+        <!--<script src="js/countable.js"></script>-->
+    </head>
+    <body>
+        <%- include partials/_FBcomments_pluggin.ejs %>
+        <!-- Modal -->
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Article Preview</h4>
+                    </div>
+                    <div class="modal-body" id="clip"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button class="clip" data-clipboard-target="#clip">Copy to Clipboard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Modal-->
+
+        <header id="intro">
+            <%- include partials/_nav.ejs %>
+        </header>
+        <main id="wrapper">
+            <div class="scene" id="bodyhome">
+                <article id="articleblock">
+                    <h1>Article Writing Tool</h1>
+                    <div class="fb-like" data-href="https://ideaninja.io/article-writing-tool.html" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+                    <%- include partials/_socialshares.ejs %>
+                    <br>
+                    <p>This tool will help you write for the web. We have embeded in this tool rules to make your article ,compliant with best practices.<p>
+                    <p>Check this tutorial to learn how to work with this tools</p>
+                    <div id="articlebody">
+                    <div class = "out_vid">
+                        <div class="art_vid">
+                            <iframe class ="vid" height=auto width="100%"  src="https://www.youtube.com/embed/RK2NjeoEp9I" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    </div>
+
+                            <p>You can find more information on how to write for the web in this article on
+                                <a href="How-to-write-article-for-the-web.html" target="blank">
+                                    how to write for the web
+                                </a>
+                            </p>
+                            <button id="new-article">New Article</button>
+                            <button id="preview" data-toggle="modal" data-target="#myModal">Preview</button>
+                        </article>
+
+                        <article class="appcanvas">
+
+                            <div class="keywords">
+                                <form>
+                                    <h1>
+                                        Keywords</h1>
+                                    <h2>
+                                        Website Keywords</h2>
+
+                                    <div>
+                                        <input class="artform_intxt" id="wk1" type="text" autocomplete="on" placeholder="keyword" required="">
+
+                                    </div>
+
+                                    <div>
+                                        <input class="artform_intxt" id="wk2" type="text" autocomplete="on" placeholder="keyword" required="">
+
+                                    </div>
+
+                                    <div>
+                                        <input class="artform_intxt" id="wk3" type="text" autocomplete="on" placeholder="keyword" required="">
+                                    </div>
+
+                                    <div>
+                                        <input class="artform_intxt" id="wk4" type="text" autocomplete="on" placeholder="keyword" required="">
+                                    </div>
+
+                                    <div>
+                                        <input class="artform_intxt" id="wk5" type="text" autocomplete="on" placeholder="keyword" required="">
+                                    </div>
+                                </form>
+
+                                <h2>
+                                    Article Keywords
+                                </h2>
+
+                                <form>
+                                    <div>
+                                        <input class="artform_intxt" id="ak1" type="text" autocomplete="on" placeholder="keyword" required="">
+                                    </div>
+
+                                    <div>
+                                        <input class="artform_intxt" id="ak2" type="text" autocomplete="on" placeholder="keyword" required="">
+                                    </div>
+
+                                    <div>
+                                        <input class="artform_intxt" id="ak3" type="text" autocomplete="on" placeholder="keyword" required="">
+                                    </div>
+
+                                    <div>
+                                        <input class="artform_intxt" id="ak4" type="text" autocomplete="on" placeholder="keyword" required="">
+                                    </div>
+
+                                    <div>
+                                        <input class="artform_intxt" id="ak5" type="text" autocomplete="on" placeholder="keyword" required="">
+                                    </div>
+                                </form>
+                                <h1>
+                                    Stats</h1>
+                                <p>Total words:
+                                    <span id="totwords">0</span>
+                                </p>
+                                <p>
+                                    Total Keywords:
+                                    <span id="totkeywords">0</span>
+                                </p>
+                                <br><br>
+                            </div>
+                            <!--Keywords-->
+
+                            <div class="articlewriter">
+                                <form>
+                                    <div>
+                                        <label class="artform_lbl" for="name">Article Name</label>
+                                        <input class="artform_intxt" id="articleName" type="text" autocomplete="on" placeholder="Article name (8 Words Max)" required="">
+                                        <p>
+                                            Keywords used:
+                                            <span id="articleName-nkeys">0</span><br>
+                                            Nr. Words:
+                                            <span id="articleName-count">0</span>
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <label class="artform_lbl" for="name">Lead</label>
+                                        <textarea id="lead" placeholder="Who, what, when, where, how and why (30 words Max, advised under 25 )" required=""></textarea>
+                                        <p>
+                                            Keywords used:<span id="lead-nkeys">0</span><br>
+                                            Nr. Words:
+                                            <span id="lead-count">0</span>
+                                        </p>
+
+                                    </div>
+
+                                    <button id="button-p" type="button">Add Paragraph</button>
+
+                                </form>
+                            </div>
+                            <!--articlewriter-->
+
+                        </article>
+                        <!--appcanvas-->
+
+                    </div>
+                    <!-- bodyhome -->
+                </main>
+                <footer class="scene">
+                    <article class="content">
+                        <div id="socialmedia">
+
+                            <div class="fb-comments" data-href="https://ideaninja.io/article-writing-tool.html" data-colorscheme="dark" data-numposts="10"></div>
+                            <%- include("partials/_footer", {script : "js/article_writer.js?abc"}) %>
+                        </body>
+                    </html>

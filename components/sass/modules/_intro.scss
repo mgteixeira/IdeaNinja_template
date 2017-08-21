@@ -1,12 +1,12 @@
 header {
   .fullheight {
     @include backImage('../images/main/homesplash.jpg');
-
     @include display-flex();
     @include align-items(center);
     @include justify-content(center);
-
+    
     .hgroup {
+
       padding: 100px 0;
 
       h1 {
@@ -36,6 +36,7 @@ header {
       p {
         text-align: center;
         img {
+          position: relative;
           padding-top: 30px;
           max-width: 50px;
         } //img

@@ -1,0 +1,84 @@
+<!-- servModal -->
+        <div class="modal fade" id="servModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Request for Contact</h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <form id="service_form">
+                      <fieldset>
+
+                        <div>
+                          <label for="companyname">Company or project name</label>  
+                          <div >
+                          <input id="companyname" type="text" autocomplete= "on" placeholder="Enter the name of the company or project here" required="">
+                          </div>
+                        </div>
+
+                        <div>
+                          <label for="contactname">Contact Name</label>  
+                          <div>
+                          <input  id="contactname" type="text" autocomplete= "on" placeholder="Contact Name" required="">
+                          </div>
+                        </div>                        
+
+                        <div>
+                          <label for="email">Contact Email</label>  
+                          <div>
+                          <input  id="email" name="email" type="text" autocomplete= "on" placeholder="Enter your email address here" required="">
+                          </div>
+                        </div>
+
+                        <div>
+                          <label for="preferedcontacttype">Perferred way of contact:</label>
+                          <div>                     
+                            <select  id="preferedcontacttype" >
+                              <option value="skype">Skype</option>
+                              <option value="hangouts">Hangouts</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div>
+                          <label for="servicepackage">Service package desired:</label>
+                          <div>                     
+                            <select  id="servicepackage" >
+                              <option value="pd1">Product Development - Prototyping & MVP</option>
+                              <option value="pd2">Product Development - Process Definition</option>
+                              <option value="pd3">Product Development - IT Product Testing</option>
+                              <option value="mp1">Marketing Plan - Full Review</option>
+                              <option value="mp2">Marketing Plan - Review</option>
+                              <option value="mp3">Marketing Plan - Mentoring</option>
+                              <option value="bmp1">Business Model and Plan - Full Review</option>
+                              <option value="bmp2">Business Model and Plan - Mentoring</option>
+                              <option value="ad1">Auditing - Cost Accounting</option>
+                              <option value="ad2">Auditing - Inventory Analysis</option>
+                              <option value="ad3">Auditing - Process Efficiency Analysis</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div>
+                          <label for="msg">Short description of the project</label>
+                          <div>                     
+                            <textarea id="msg" name="msg" cols="6" rows="6"></textarea>
+                          </div>
+                        </div>
+                                                <!-- Button -->
+                        <div>
+                          <label for="submit"></label>
+                          <div>
+                            <button id="submit" name="submit">Send Message</button>
+                          </div>
+                        </div>
+
+                      </fieldset>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+ <!--End servModal-->

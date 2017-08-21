@@ -1,0 +1,247 @@
+.nav-tabs {
+  a{
+    text-decoration: none;
+    color: $headColor; 
+  }
+}
+
+
+
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  /*width: 100%;*/ /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  /*width: 100%;*/
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 24px;
+  width: 10px;
+  border-radius: 2px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  /*width: 100%;*/
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: $headColor;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+  /*width: 100%;*/
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #a41505;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+  /*width: 100%;*/
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #a41505;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #a41505;
+}
+input[type=range]::-ms-fill-upper {
+  background: #a41505; 
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #a41505;
+}
+
+// Scss to input range
+// https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+// https://github.com/darlanrod/input-range-scss
+// Styling Cross-Browser Compatible Range Inputs with Sass
+// Github: https://github.com/darlanrod/input-range-sass
+// Author: Darlan Rod https://github.com/darlanrod
+// Version 1.1.1
+// MIT License
+
+$track-color: $orange !default;
+$thumb-color: $dark !default;
+
+$thumb-radius: 1px !default;
+$thumb-height: 10px !default;
+$thumb-width: 10px !default;
+$thumb-shadow-size: 1px !default;
+$thumb-shadow-blur: 1px !default;
+$thumb-shadow-color: #111 !default;
+$thumb-border-width: 1px !default;
+$thumb-border-color: #fff !default;
+
+$track-width: 100% !default;
+$track-height: 10px !default;
+$track-shadow-size: 2px !default;
+$track-shadow-blur: 2px !default;
+$track-shadow-color: #222 !default;
+$track-border-width: 1px !default;
+$track-border-color: #000 !default;
+
+$track-radius: 5px !default;
+$contrast: 5% !default;
+
+@mixin shadow($shadow-size, $shadow-blur, $shadow-color) {
+  box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size lighten($shadow-color, 5%);
+}
+
+@mixin track() {
+  width: $track-width;
+  height: $track-height;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+@mixin thumb() {
+  @include shadow($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color);
+  border: $thumb-border-width solid $thumb-border-color;
+  height: $thumb-height;
+  width: $thumb-width;
+  border-radius: $thumb-radius;
+  background: $thumb-color;
+  cursor: pointer;
+}
+
+[type=range] {
+  -webkit-appearance: none;
+  margin: $thumb-height / 2 0;
+  //width: $track-width;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include track();
+    @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius;
+  }
+
+  &::-webkit-slider-thumb {
+    @include thumb();
+    -webkit-appearance: none;
+    margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+    background: lighten($track-color, $contrast);
+  }
+
+  &::-moz-range-track {
+    @include track();
+    @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius;
+  }
+
+  &::-moz-range-thumb {
+    @include thumb();
+  }
+
+  &::-ms-track {
+    @include track();
+    background: transparent;
+    border-color: transparent;
+    border-width: $thumb-width 0;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+    background: darken($track-color, $contrast);
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius * 2;
+  }
+
+  &::-ms-fill-upper {
+    @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius * 2;
+  }
+
+  &::-ms-thumb {
+    @include thumb();
+  }
+
+  &:focus::-ms-fill-lower {
+    background: $track-color;
+  }
+
+  &:focus::-ms-fill-upper {
+    background: lighten($track-color, $contrast);
+  }
+}

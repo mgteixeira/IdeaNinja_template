@@ -1,0 +1,106 @@
+.appcanvas{
+  	padding-top: 25px;
+  	margin-top: 35px;
+
+	.articlewriter{
+		@include span(12);
+
+		.artform_lbl{
+			@include span(3);
+		}//artform_lbl
+
+		.artform_intxt{
+			@include span(7);
+		}//artform_intxt
+
+  button{
+    width: 100%;
+  
+  }
+
+		p{
+			@include span(2);
+			font-weight: $thin;
+			font-size: 11px;
+		}//p
+
+		textarea{
+			@include span(7);
+			min-height: 6em;
+			margin-bottom: 	5px;
+		}//textarea
+
+		h1 {
+			@include span(12)
+		}//h1
+
+		.paragraphs{
+			/*border-top-style: solid;
+			border-top-color: $dark;
+			border-top-width: 1px;*/
+		}//paragraphs
+
+		.artform_file {
+			@include span(9);
+			height:24px;
+		}//artform_file
+
+		.artform_link {
+			@include span(9);
+		}
+
+    @include breakpoint($small) {
+    	@include span(8);
+      float: left;
+      border-right-width: 1px;
+    	border-color: $dark;
+    	border-style: solid;
+    }
+	}//articlewriter
+
+	.keywords{
+		@include span(12);
+
+		.artform_lbl{
+			@include span(1);
+		}//artform_lbl
+
+		.artform_intxt{
+			@include span(12);
+		}//artform_intxt
+
+		h1 {
+			@include span(12)
+		}//h1
+
+		h2 {
+			@include span(12)
+		}//h2
+
+		 @include breakpoint($small) {
+		 	@include span(4);
+        	float: right;
+		 } 
+	}//keywords
+}//appcanvas
+
+// Extra Modal Rules
+.modal-body{
+
+
+  h1:first-letter, h2:first-letter, p:first-letter, span:first-letter{
+  	text-transform: uppercase; 
+  }//h1, h2, p
+/*	*/
+
+  img{
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 100%;
+    height: auto;
+
+    @include breakpoint($small) {
+      width: 50%;
+    }
+  }//img
+}

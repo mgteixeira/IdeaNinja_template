@@ -1,6 +1,6 @@
 // style.scss
 // ==============
- 
+
 //Compass imports
 @import "compass";
 @import "compass/reset";
@@ -15,14 +15,26 @@
 @import "breakpoint";
 
 //Core Partial
-@import "variables";
-@import "mixins";
-@import "base";
-@import "layout";
+@import "core/mixins";
+@import "core/variables";
+@import "core/base";
+@import "core/layout";
 
 //Import Modules
-@import "modules/intro";
-@import "modules/nav";
-@import "modules/other";
+@import "modules/article_writer";
+@import "modules/breakpoint_small";
+@import "modules/business_idea";
+@import "modules/collapse-bootstrap";
+@import "modules/contact_form";
 @import "modules/footer";
 @import "modules/forms";
+@import "modules/intro";
+@import "modules/modal-bootstrap";
+@import "modules/nav-bootstrap";
+@import "modules/navbar";
+@import "modules/other";
+@import "modules/pitch_machine";
+@import "modules/progress-bars-bootstrap";
+@import "modules/tables-bootstrap";
+@import "modules/services"; 
+@import "modules/slider"; 

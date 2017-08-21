@@ -2,6 +2,7 @@ footer {
   @include container(100%);
   background: lighten($dark, 20);
   padding: 20px 0;
+
   #socialmedia {
     text-align: center;
     ul {
@@ -10,10 +11,28 @@ footer {
         display: inline-block;
         padding: 0 20px;
         img {
-          width: 64px;
-          @include border-radius(50%);
+            width: 40px;
+            @include border-radius(50%);
+
+          @include breakpoint($small) {
+            width: 64px;
+            @include border-radius(50%);
+          }//Small
         } // img
       } //li
     } //ul
   } //social
+
+  #terms {
+    text-align: center;
+    padding-top: 40px; 
+    p{
+      color:$light;
+
+      }//p
+    a{
+      text-decoration: none;
+      color:$light;
+    }//a
+  }//terms
 }//footer

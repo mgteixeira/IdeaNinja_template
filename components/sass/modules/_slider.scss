@@ -1,0 +1,124 @@
+/*https://css-tricks.com/almanac/properties/o/object-fit/*/
+
+.object-fit_fill { object-fit: fill }
+.object-fit_contain { object-fit: contain }
+.object-fit_cover { object-fit: cover }
+.object-fit_none { object-fit: none }
+.object-fit_scale-down { object-fit: scale-down }
+
+  #artslider{
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 60%; 
+  display: inline-block;
+  position: relative;
+  float: none; 
+
+
+  .slidernav{
+    margin-left: 0%;
+    min-width: 200px;
+     @include breakpoint($small) {
+            @include span(isolate 2 at 6 of 12 ); 
+      }//small
+    /*float: left;*/
+  .leftslider{
+   @include span(isolate 1 at 3 of 12 ); 
+   /*@include span(1);*/
+   padding: 1px; 
+    img {
+      width: 100%;
+      }//img
+  }//leftslider
+
+  #progressor{
+    @include span(isolate 4 at 4 of 12 );
+    /*@include span(4);*/
+    height: 2px;
+    margin-top: 11px;
+    border-style: solid;
+    /*border-width: 1px; */
+    border-color: $green;
+    padding: 0px; 
+
+    #pbar{
+      background: $green;
+      height: 2px;
+      width: 0%;
+    }
+  }
+
+  .rightslider{
+  @include span(isolate 1 at 9 of 12 );
+  /*@include span(1);*/
+  padding: 1px; 
+  img {
+    width: 100%;
+    }//img
+  }//rightslider
+
+}
+
+  .slider {
+    @include span(12);
+    position: static;
+    float: none; 
+
+    /*
+    border-color: $dark;
+    border-style: solid;
+    border-width: 1px; 
+    */
+   
+    .articleslots{
+      /*@include span(9);*/
+      margin-top: 30px; 
+      /*
+      border-color: $dark;
+      border-style: solid;
+      border-width: 1px;
+      */
+
+      .artslot{
+        @include span(4);
+        position: relative;
+      /*
+        border-color: $dark;
+        border-style: solid;
+        border-width: 1px;
+      */
+        img {
+          position: absolute;
+          width: 100%;
+          height: 110px; 
+
+          @include breakpoint ($small) {
+            height: 190px; 
+            }//small
+
+          }//img
+        h2 {
+          position: absolute;
+          background: rgba(0, 0, 0, 0.2);
+          padding: 10px; 
+          color: $light; 
+          font-size: 1em;
+          width: 100%;
+        }
+        .slidedesc{
+          /*position: relative; */
+          display: inline-block;
+          margin-bottom: 30px; 
+          p {
+            font-size: 0.8em
+          }  
+        }
+        
+      }//artslot
+
+    }//articleslots
+
+
+
+  }//slider
+}//artslider

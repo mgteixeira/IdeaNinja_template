@@ -1,0 +1,94 @@
+ @include breakpoint($small) {
+
+    .appcanvas {
+      /*
+      .articlewriter{
+        @include span(8);
+        float: left;
+        border-right-width: 1px;
+        border-color: $dark;
+        border-style: solid;
+      }//articlewriter
+
+      .keywords{
+        @include span(4);
+        float: right;
+        }//keywords
+*/
+    }//appcanvas
+
+    #firsthomeblock {
+      margin-bottom: 30px;
+
+      h1 {
+        font-weight: $thin;
+        font-size: 2.5em;
+      } //h1
+
+      p {
+        font-size: 1.3em;
+        line-height: 140%;
+        @include span(12);
+      } //p
+
+      a {
+        color: $headColor;
+        text-decoration: none;
+        font-weight: $bold;
+        }//a
+
+         #contact_form{
+        @include span(8);
+      }//contact_form
+
+      #topPicks {
+          background: $red;
+          padding:10px 30px 30px 20px;
+          @include border-radius(10px);
+          @include span(12);
+          /**float:right;**/
+          margin-top: 10px;
+
+        h2 {
+          color: $dark;
+          text-align: left;
+          border-bottom: 3px;
+          border-style: solid;
+          border-color: $light;
+          /*text-align: center;*/
+          }//h2
+
+          ul {
+          list-style-image: url(../images/icons/awardbullet_white.png);
+            }//ul
+
+      }//topPicks
+
+    } //firsthomeblock
+
+    section {
+      /*@include span(6 of 12);*/
+
+
+      h2 {
+        font-size: 1.2em;
+        line-height: 120%;
+        color: $pink;
+      }
+      p {
+        padding-top: 10px;
+        font-size: 1em;
+        line-height: 130%;
+      }//P
+
+    }//section
+
+  .inputform {
+    form {
+      @include span(12);
+
+    }//form
+
+  }//inputform
+
+} //breakpoint

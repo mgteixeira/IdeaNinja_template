@@ -1,0 +1,19 @@
+<h1>Paragraph <%= paragraph %></h1>
+
+<div id="p<%= paragraph %>">
+    <div>
+        <label class="artform_lbl" for="name">Heading</label>
+        <input class="artform_intxt" id="p<%= paragraph %>-h" type="text" autocomplete="on" placeholder="Paragraph heading (8 Words Max, Reflect the one idea of the paragraph)" required="">
+        <p>
+            Keywords used: <span id="p<%= paragraph %>-h-nkeys">0</span><br>
+            Nr. Words: <span id="p<%= paragraph %>-h-count">0</span>
+        </p>
+    </div>
+    <button id="button-s-p<%= paragraph %>" type="button">Add Sentence</button>
+    <div>
+        <label class="artform_lbl" for="name">Image URL</label>
+        <input class="artform_file" id="p<%= paragraph %>-img" type="url" placeholder="Add an external link to the image. Not required.">
+        <label class="artform_lbl" for="name">Image Description</label>
+        <input class="artform_file" id="p<%= paragraph %>-img-alt" type="text" placeholder="The alternative text for image.">
+    </div>
+</div>
