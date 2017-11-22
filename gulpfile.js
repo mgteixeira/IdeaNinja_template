@@ -8,14 +8,15 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     browserify = require('gulp-browserify'),
+    babelify = require('babelify'),
     compass = require('gulp-compass'),
     connect = require('gulp-connect'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
-    concat = require( 'gulp-concat'),
+    //concat = require( 'gulp-concat'),
     path = require('path'),
-    save = require('gulp-save'),
+    //save = require('gulp-save'),
     sitemap = require('gulp-sitemap'),
     ejs = require("gulp-ejs"),
     imagemin = require('gulp-imagemin'),
@@ -24,26 +25,21 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence') ,
     clean = require('gulp-clean'),
     spawn = require('cross-spawn').spawn,
-    obfuscate = require('gulp-obfuscate'),
     watch = require('gulp-watch'),
+    pump = require('pump');
     cssnano = require('gulp-cssnano');
 
 // VARIABLES
 
 var sources = {
-  js_all: 'components/scripts/**/*.*',
-  js_global: 'components/scripts/global/*.js',
   js_main: 'components/scripts/global/script.js',
-  js_awt: 'components/scripts/tools/article_writer.js',
-  js_apm: 'components/scripts/tools/automatic_pitch_machine.js',
-  js_bsi: 'components/scripts/tools/business_idea.js',
-  js_fpage: 'components/scripts/tools/slider.js',
-
+  js_global: 'components/scripts/global/*.js',
   sass: 'components/sass/style.scss',
   img: 'components/images/**/**/*.*',
   html: '*.html',
   parts: 'components/parts/**/*.*', 
   docs: 'components/docs/*.*',
+  fonts: 'components/fonts/**/*.*', 
   models: 'model/*.json'
 };
 
@@ -52,7 +48,7 @@ var output = {
   pro: 'builds/production/'
 };
 
-var production = true;
+var production = false;
 
 // THE EDITION STOPS HERE!
 // DON'T EDIT THE FOLLOWING CODE!
@@ -71,7 +67,7 @@ gulp.task('start', start());
 // Default
 gulp.task('default', function(callback) {
   runSequence('start', 'clean',
-              ['ejs', 'images', 'compass', 'js_main', 'js_awt', 'js_apm', 'js_bsi', 'js_fpage', 'parts', 'docs', 'models'],
+              ['ejs', 'images', 'compass', 'js_main', 'parts', 'docs', 'models', 'fonts'],
               'html',
               ['robots', 'sitemap', 'connect'],
               'auto-reload', 'watch',
@@ -81,17 +77,14 @@ gulp.task('default', function(callback) {
 // Watch
 gulp.task('watch', function() {
   gulp.watch(sources.js_global, ['js_main']);
-  gulp.watch(sources.js_awt, ['js_awt']);
-  gulp.watch(sources.js_apm, ['js_apm']);
-  gulp.watch(sources.js_bsi, ['js_bsi']);
-  gulp.watch(sources.js_fpage, ['js_fpage']);
   gulp.watch(['components/images/**/*.*','components/images/**/**/*.*'] , ['images']);
-  gulp.watch('components/sass/modules/*.scss', ['compass']);
-  gulp.watch('components/sass/core/*.scss', ['compass']);
-  gulp.watch('components/sass/style.scss', ['compass']);
+  gulp.watch('components/sass/**/*.scss', ['compass']);
+//  gulp.watch('components/sass/core/*.scss', ['compass']);
+//  gulp.watch('components/sass/style.scss', ['compass']);
   gulp.watch(sources.html, ['sitemap']);
   gulp.watch(sources.parts, ['parts']);
   gulp.watch(sources.docs, ['docs']);
+  gulp.watch(sources.fonts, ['fonts']);
   gulp.watch(['templates/*.ejs','templates/partials/*.ejs'], function() {
     runSequence(
       ['ejs'],
@@ -103,16 +96,15 @@ gulp.task('watch', function() {
 
 // Js
 gulp.task('js_main',  function(){return js();});
-gulp.task('js_awt',   function(){return js(sources.js_awt);});
-gulp.task('js_apm',   function(){return js(sources.js_apm);});
-gulp.task('js_bsi',   function(){return js(sources.js_bsi);});
-gulp.task('js_fpage', function(){return js(sources.js_fpage);});
 
 // Parts
 gulp.task('parts',    function(){return parts();});
 
 // docs
 gulp.task('docs',     function(){return docs();});
+
+// Fonts
+gulp.task('fonts', function(){return fonts();});
 
 // Models
 gulp.task('models', function(){return models();});
@@ -135,34 +127,44 @@ gulp.task('connect', function() {
 
 // compass : Sass pre-processor by Compass with Susy and Breakpoint
 gulp.task('compass', function() {
+
   gulp.src(sources.sass)
       .pipe(compass({
         sass: 'components/sass',
         css: getOutput() + 'css',
         image: getOutput() + 'images',
-        style: sassStyle,
-        require: ['susy', 'breakpoint']
+        style: sassStyle, 
+        require: ['breakpoint']
       })
       .on('error', gutil.log));
   gulp.src(getOutput() + 'css')
       .pipe(gulpif(isProd(), cssnano()));
+
 });
 
 
 // js : Compile the main js with other source
-function js(source){
+function js(source, cb){
   if (source === undefined) {
     source = sources.js_main;
   }
-  return gulp.src(source, {read: false})
-             .pipe(browserify({
+   pump([
+      gulp.src(source, {read: false}),
+      browserify({
                insertGlobals : true,
-               debug : !isProd()
-             }))
-             .on('error', gutil.log)
-             .pipe(gulpif(isProd(), uglify()))
-             .pipe(gulp.dest(getOutput() + 'js'));
+               debug : !isProd(), 
+               transform: [
+                babelify.configure({
+                extensions: [".jsx", ".js"],
+                sourceMapsAbsolute: true
+                            })]
+             }), 
+      gulpif(isProd(), uglify()),
+      gulp.dest(getOutput() + 'js')
+   ],
+   cb)
 }
+
 
 // parts
 function parts(){
@@ -177,8 +179,14 @@ function docs(){
              .on('error', gutil.log)
              .pipe(gulp.dest(getOutput() + 'docs'));
 }
+// fonts
+function fonts(){
+  return gulp.src(sources.fonts)
+             .on('error', gutil.log)
+             .pipe(gulp.dest(getOutput() + 'fonts'));
+}
 
-// docs
+// models
 function models(){
   return gulp.src(sources.models)
              .on('error', gutil.log)
