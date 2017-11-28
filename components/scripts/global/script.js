@@ -15,20 +15,17 @@
 // NPM Packages>
 
 
-
 require ('./jquery.timeago.min.js');
 //require ('./prism.js');
-//require ('lunr');
-//require ('./search.js');
+
 require('jquery-hammerjs'); 
 require ('./materializecss/all/materialize.js');
 require('./init.js');
-
-
-
+//require('lunr'); 
+require('./search.js'); 
+ 
 
 /*
-
 $ = require('jquery'); 
 jQuery = $;
 window.jQuery= 'jQuery';
