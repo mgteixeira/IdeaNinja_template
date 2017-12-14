@@ -1,0 +1,50 @@
+<html>
+  <%- include("partials/head", {
+    description: "Appoint a meeting with us to discuss any issue regarding IdeaNinja" , 
+    title: "Contact Us", 
+    image: "/images/logo_components_color_2x_web_48dp.png", 
+    href: "contactus.html", 
+    type: "website"
+}) %>
+
+  <%- include("partials/head_analytics") %>
+  
+  <body class="mdc-typography">
+    
+    <%- include partials/nav.ejs %>
+
+
+    <div class="container background">
+      <div class="row">
+
+        <%- include partials/FAB_contact %> 
+      
+      <div class=card-panel>
+          <div class="article">
+
+      <h1>Setup a meeting with us </h1>
+      <p>Appoint a meeting with us to discuss any issue regarding IdeaNinja</p>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/ideaninja/15min" style="min-width:320px;height:"auto";"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<!-- Calendly inline widget end -->
+
+
+          </div> <!--article-->       
+        </div><!--cardpanel-->
+      
+      <div id="searchheader"></div>
+      <div id="cardsrow">
+        <div id="endofcards"></div>
+        </div> <!-- cardsrow-->
+
+      </div><!-- Row -->
+      </div><!--container --> 
+ 
+
+    <%- include partials/footer.ejs %>
+    <script src="/js/cardDisplay.js"></script>
+    
+        
+  </body>
+</html>

@@ -1,14 +1,13 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Idea Ninja - The Entrepreneur Dojo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/materialize.css?abc" />
-  </head>
+  <%- include("partials/head", {
+    description: "Idea Ninja is dedicated to work with you to develop your startup into a successful venture. We will share with you the secrets, tools and lessons learned that will allow you to leapfrog the competition, reduce costs, minimize risks and grow." , 
+    title: "Entrepreneur Dojo", 
+    image: "/images/logo_components_color_2x_web_48dp.png", 
+    href: "", 
+    type: "website"
+}) %>
+
+  <%- include("partials/head_analytics") %>
 
   <body class="mdc-typography">
     
@@ -18,96 +17,20 @@
 
       <div class="row">
         
-        <div class="fixed-action-btn">
-          <a class="btn-floating btn-large secondary-color " 
-          onclick="
-            if(window.innerWidth >992) {
-              $('#search').focus();
-            }
-            else {
-              $('#mmenu').trigger('click')
-             $('#searchmobile').focus()
-                 }
-              ">
-            <i class="large material-icons">search</i>
-          </a>
-        </div>
+        <%- include partials/FAB_search %>
 
-         <div class="col s12 m6">
-            <div class="card">
-              <div class="card-image">
-                <div class="video-container" ><iframe src="https://www.youtube.com/embed/U2peb27Na-s" frameborder="0" allowfullscreen></iframe></div>           
-                </div>
-                <div class="card-content">
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
-                  </div>
-                <div class="card-action">
-                  <a href="#">This is a link</a>
-                  </div>
-              </div>
-          </div>
 
-          <div class="col s12 m6">
-            <div class="card">
-              <div class="card-image">
-                <img src="images\articles\build-system\build.jpeg">
-                <span class="card-title">Card Title</span>
-                </div>
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-                </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-                </div>
-              </div>
-          </div>
-
-          <div class="col s12 m6">
-            <div class="card">
-              <div class="card-image">
-                <img src="images\articles\build-system\build.jpeg">
-                <span class="card-title">Card Title</span>
-                </div>
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-                </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-                </div>
-              </div>
-          </div>
-
-          <div class="col s12 m6">
-            <div class="card">
-              <div class="card-image">
-                <img src="images\articles\build-system\build.jpeg">
-                <span class="card-title">Card Title</span>
-                </div>
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-                </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-                </div>
-              </div>
-          </div>
-
+        <div id="cardsrow">
+          <div id="searchheader"></div>
+          <div id="endofcards"></div>
+        </div> <!-- cardsrow-->
           </div><!-- Row -->
+
         </div><!--container -->      
     </div>
 
-
     <%- include partials/footer.ejs %>
-    
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/js/script.js"></script>
-
-       
+    <script src="/js/cardDisplay.js"></script>
         
   </body>
 </html>

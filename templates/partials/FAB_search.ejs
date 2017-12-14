@@ -1,0 +1,14 @@
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large secondary-color " 
+          onclick="
+            if(window.innerWidth >992) {
+              $('#searchinput').focus();
+            }
+            else {
+              $('#mmenu').trigger('click')
+             $('#searchmobileinput').focus()
+                 }
+              ">
+            <i class="large material-icons">search</i>
+          </a>
+        </div>

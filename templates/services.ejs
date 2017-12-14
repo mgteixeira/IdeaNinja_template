@@ -1,139 +1,52 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Idea Ninja - The Entrepreneur Dojo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/materialize.css?abc" />
-  </head>
+  <%- include("partials/head", {
+    description: "IdeaNinja extends beyond articles and tools we also provide services to help you thrive" , 
+    title: "Services", 
+    image: "/images/logo_components_color_2x_web_48dp.png", 
+    href: "services.html", 
+    type: "article"
+}) %>
 
+  <%- include("partials/head_analytics") %>
+  
   <body class="mdc-typography">
     
     <%- include partials/nav.ejs %>
 
-        <div class="fixed-action-btn">
-          <a class="btn-floating btn-large secondary-color ">
-            <i class="large material-icons">add</i>
-          </a>
-          <ul>
-           
-            <li><a href="" >
-              <i class="material-icons">call</i>
-              Schedule Call</a></li>
 
-            <li><a href="mailto:contactus@ideaninja.io"> 
-              <i class="material-icons">email</i>
-              Send Email
-            </a></li>
-            <li><a href="http://www.hotmail.msn.com/secure/start?action=compose&to=contactus@ideaninja.io">
-              <i class="material-icons">email</i>
-              Send Hotmail
-            </a></li>
+    <div class="container background">
+      <div class="row">
 
-            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=contactus@ideaninja.io ">
-              <i class="material-icons">email</i>
-              Send Gmail
-              </a>
-            </li>
-          </ul>
-        </div>
-
-    <div class="row container background">
-      <div class=card-panel>
-      <h1>Heading h1</h1>
-      <h2>Heading h2</h2>
-      <h3>Heading h3</h3>
-      <h4>Heading h4</h4>
-      <p>paragraph</p>
-      <p class="flow-text"> flow-text paragraph</p>
-      <ul>
-        <li>ul il</li>
-      </ul>
-      <ol>
-        <li>ol li</li>
-      </ol>
-
-      <blockquote>
-      This is an example quotation that uses the blockquote tag.
-      </blockquote>
+        <%- include partials/FAB_contact %> 
       
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper justo id dolor fermentum malesuada. Nunc fringilla ullamcorper felis at vestibulum. Proin pellentesque elit at odio dignissim facilisis. Cras interdum scelerisque justo non lobortis. In vitae felis a enim eleifend vestibulum. Integer finibus iaculis sem sit amet tempus. Cras erat ipsum, sodales facilisis ex vel, dictum finibus dolor. Cras dignissim nunc at lacus vestibulum, a pharetra mi pulvinar. Vivamus vulputate mollis sem, ut dignissim ipsum viverra vel. Sed gravida faucibus leo, et consectetur quam bibendum nec. Duis erat quam, egestas a pellentesque in, porta in augue. Curabitur erat nulla, porta sed massa sed, imperdiet ornare dolor. Fusce in arcu leo. Proin dapibus elit at ullamcorper cursus.</p>
+      <div class=card-panel>
 
-      <img  style="width:100%" src="images/articles/basics_seo/crtl.jpg" alt="Why">
+          <div class="article">
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper justo id dolor fermentum malesuada. Nunc fringilla ullamcorper felis at vestibulum. Proin pellentesque elit at odio dignissim facilisis. Cras interdum scelerisque justo non lobortis. In vitae felis a enim eleifend vestibulum. Integer finibus iaculis sem sit amet tempus. Cras erat ipsum, sodales facilisis ex vel, dictum finibus dolor. Cras dignissim nunc at lacus vestibulum, a pharetra mi pulvinar. Vivamus vulputate mollis sem, ut dignissim ipsum viverra vel. Sed gravida faucibus leo, et consectetur quam bibendum nec. Duis erat quam, egestas a pellentesque in, porta in augue. Curabitur erat nulla, porta sed massa sed, imperdiet ornare dolor. Fusce in arcu leo. Proin dapibus elit at ullamcorper cursus.</p>
+          <h1>Services</h1>
+      <p>IdeaNinja extends beyond articles and tools we also provide services to help you thrive</p>
+      <h2>Mentorship</h2>
+      <p>We provide mentorship programs with severall layers of complexity. From a simple review style mentorship, up to strategic debats, to coaching programs.</p>
+      <h2>Trainning</h2>
+      <p>We do trainning sessions for accelleration programs. If you are interested in hosting a acceleration program, we can create the content and deliver the trainning. </p>
 
-      </div>
+    
+     
+          </div> <!--article-->
+        
+        </div><!--cardpanel-->
+      <div id="searchheader"></div>
+      <div id="cardsrow">
+        <div id="endofcards"></div>
+        </div> <!-- cardsrow-->
 
-          <div class="col s12 m6">
-            <div class="card">
-              <div class="card-image">
-                <img src="images\articles\build-system\build.jpeg">
-                <span class="card-title">Card Title</span>
-                </div>
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-                </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-                </div>
-              </div>
-          </div>
-
-          <div class="col s12 m6">
-            <div class="card">
-              <div class="card-image">
-                <img src="images\articles\build-system\build.jpeg">
-                <span class="card-title">Card Title</span>
-                </div>
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-                </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-                </div>
-              </div>
-          </div>
-
-
-          <div class="col s12 m6">
-            <div class="card">
-              <div class="card-image">
-                <img src="images\articles\build-system\build.jpeg">
-                <span class="card-title">Card Title</span>
-                </div>
-
-              </div>
-          </div>
-
-          <div class="col s12 m6">
-            <div class="card">
-              <div class="card-image">
-                <img src="images\articles\build-system\build.jpeg">
-                <span class="card-title">Card Title</span>
-                </div>
-
-              </div>
-          </div>
-
-
+      </div><!-- Row -->
       </div><!--container --> 
  
 
-
-
     <%- include partials/footer.ejs %>
+    <script src="/js/cardDisplay.js"></script>
     
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/js/script.js"></script>
-
-       
         
   </body>
 </html>

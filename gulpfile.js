@@ -21,26 +21,29 @@ var gulp = require('gulp'),
     ejs = require("gulp-ejs"),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    robots = require('gulp-robots'),
+    JpegRecompress = require('imagemin-jpeg-recompress');    robots = require('gulp-robots'),
     runSequence = require('run-sequence') ,
     clean = require('gulp-clean'),
     spawn = require('cross-spawn').spawn,
     watch = require('gulp-watch'),
     pump = require('pump');
-    cssnano = require('gulp-cssnano');
+    cssnano = require('gulp-cssnano'); 
+
+
 
 // VARIABLES
 
 var sources = {
   js_main: 'components/scripts/global/script.js',
   js_global: 'components/scripts/global/*.js',
+  js_cards: 'components/scripts/global/cardDisplay.js',
   sass: 'components/sass/style.scss',
   img: 'components/images/**/**/*.*',
   html: '*.html',
   parts: 'components/parts/**/*.*', 
   docs: 'components/docs/*.*',
-  fonts: 'components/fonts/**/*.*', 
-  models: 'model/*.json'
+  fonts: 'components/fonts/**/*.*' 
+//  models: 'model/*.json'
 };
 
 var output = {
@@ -67,16 +70,16 @@ gulp.task('start', start());
 // Default
 gulp.task('default', function(callback) {
   runSequence('start', 'clean',
-              ['ejs', 'images', 'compass', 'js_main', 'parts', 'docs', 'models', 'fonts'],
+              ['ejs', 'images', 'compass', 'js_main', 'js_cards', 'parts', 'docs', 'fonts'],
               'html',
               ['robots', 'sitemap', 'connect'],
-              'auto-reload', 'watch',
+             'watch',
               callback);
 });
 
 // Watch
 gulp.task('watch', function() {
-  gulp.watch(sources.js_global, ['js_main']);
+  gulp.watch(sources.js_global, ['js_main', 'js_cards']);
   gulp.watch(['components/images/**/*.*','components/images/**/**/*.*'] , ['images']);
   gulp.watch('components/sass/**/*.scss', ['compass']);
 //  gulp.watch('components/sass/core/*.scss', ['compass']);
@@ -96,6 +99,7 @@ gulp.task('watch', function() {
 
 // Js
 gulp.task('js_main',  function(){return js();});
+gulp.task('js_cards',  function(){return js(sources.js_cards);});
 
 // Parts
 gulp.task('parts',    function(){return parts();});
@@ -151,19 +155,23 @@ function js(source, cb){
    pump([
       gulp.src(source, {read: false}),
       browserify({
-               insertGlobals : true,
-               debug : !isProd(), 
-               transform: [
-                babelify.configure({
-                extensions: [".jsx", ".js"],
-                sourceMapsAbsolute: true
-                            })]
-             }), 
-      gulpif(isProd(), uglify()),
-      gulp.dest(getOutput() + 'js')
+        insertGlobals : true,
+        debug : !isProd(), 
+        transform: [
+          babelify.configure({
+            extensions: [".jsx", ".js"],
+//            presets: ["env", "react"],
+            sourceMapsAbsolute: true
+            })//babelify-configure
+          ]//transform
+        }),//browserify
+      gulp.dest(getOutput() + 'js'),
+      gulpif(isProd(), uglify())
    ],
-   cb)
-}
+   cb,
+      function (err) { if(err){console.log('error : ', err)}}
+  )}
+
 
 
 // parts
@@ -187,12 +195,13 @@ function fonts(){
 }
 
 // models
+/*
 function models(){
   return gulp.src(sources.models)
              .on('error', gutil.log)
              .pipe(gulp.dest(getOutput() + 'models'));
 }
-
+*/
 // TOOLS FUNCTIONS
 
 // getOutput: Return the correct output directory
@@ -225,18 +234,20 @@ gulp.task('robots', function () {
 //optimizes images
 gulp.task('images', function () {
     return gulp.src(sources.img)
-        .pipe(imagemin({
+        .pipe(imagemin(
+          [pngquant({quality: '65-75'}), 
+          JpegRecompress({quality: "medium", loops: 8})],
+          {
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
         }))
         .pipe(gulp.dest(getOutput() +'images'));
 });
 
 //Reloads gulp if gulp.js or model is altered
-gulp.task('auto-reload', function() {
+/*gulp.task('auto-reload', function() {
   var p;
-  gulp.watch(['model/*.json'], spawnChildren);
+  gulp.watch(['model/*.json'], spawnChildren);  
   spawnChildren();
   function spawnChildren(e) {
     // kill previous spawned process
@@ -246,7 +257,7 @@ gulp.task('auto-reload', function() {
     p = spawn('gulp', ['ejs'], {stdio: 'inherit'});
   }
 });
-
+*/
 //Reloads server and if production minifies
 gulp.task('html', function() {
   return gulp.src(sources.html)
@@ -258,8 +269,8 @@ gulp.task('html', function() {
 gulp.task('ejs', function(){
     return gulp.src("templates/*.ejs")
    .pipe(ejs(
-      data = require('./model/test.json'),
-      {
+      {},
+      { 
         compileDebug: true,
         client: true,
         ext: '.html'

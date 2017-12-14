@@ -1,0 +1,90 @@
+<html>
+  <%- include("partials/head", {
+    description: "Driving traffic to your website is probably one of the biggest Marketing challenges you have on your startup to-do list. Writing articles can go a long way." , 
+    title: "How to drive traffic to your website - SEO", 
+    image: "images/articles/howto-drive-traffic-seo/write_article.jpg", 
+    href: "How-to-drive-traffic-to-your-website-SEO.html", 
+    type: "article"
+}) %>
+  <%- include("partials/head_art", {
+    published: "2015-08-25", 
+    modified_time: "2017-12-11", 
+    author: "Miguel Teixeira"
+}) %>
+  <%- include("partials/head_analytics") %>
+  
+  <body class="mdc-typography">
+    
+    <%- include partials/nav.ejs %>
+
+
+    <div class="container background">
+      <div class="row">
+
+        <%- include("partials/FAB_share", {
+        href : "How-to-drive-traffic-to-your-website-SEO.html"
+        }) %>
+        
+      
+      <div class=card-panel>
+
+
+        
+          <%- include("partials/article_title", {
+            title: "How to drive traffic to your website - SEO", 
+            author: "Miguel Teixeira", 
+            modified_time:"2017-12-11", 
+            tags: "Marketing, traffic, SEO, website"
+            }) %>
+
+          <div class="article">
+  
+
+      <p> Driving traffic to your website is probably one of the biggest Marketing challenges you have on your startup to-do list. Writing articles can go a long way. </p>
+
+      <div class="video-container">
+        <iframe class ="vid" height=auto width="100%"  src="https://www.youtube.com/embed/SJyUS9r-TlE" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <h2>The big misconception</h2>
+      <p> The biggest mistake I see people doing is assuming that by just having a website, you will have instant traffic. BIG MISTAKE! - There are millions of websites that have content similar or better than yours. When potential clients search for products or services using the very same keywords you are "betting on", most probably your website will not appear in the first results page. Not being in the first page is similar to not existing at all.</p>
+      <h2>Why should you write articles?</h2>
+      <img src="images/articles/howto-drive-traffic-seo/write_article.jpg" id="articleimg" alt="Write Article">
+      <p>As early as the idea pops up, you should work on your Marketing strategy. Articles are a great way to generate traffic, simply because of Search Engine Optimization (SEO). You can easily start a website where you can blog, and steadily increase the traffic and value of your website. Google search indexation and ranking algorithms are heavily related to the richness of your website's content.</p>
+      <h2>SEO? Who???</h2>
+      <p>If you haven't heard of SEO or Search Engine Optimization, spend some time looking into it, thoroughly.  The time you spend on this subject will be profitable on the long run to build and support your Marketing strategy. Using your website to help you generate sales isn't easy. You need to have the right content to generate traffic to your website and rank higher on Google searches. If you are still interested on this matter then you should check out our article about the <a href="basics_seo.html" target="blank">Basics of SEO</a>, since we will be only giving a quick overview of this subject on this article.</p>
+      <h2>SEO quick tips</h2>
+      <p>No website page should go without at least:</p>
+     <blockquote><ul>
+        <li>150 original words,</li>
+        <li>1 unique relevant link (outside or to inside your website),</li>
+        <li>1 original piece of media (video, picture, mp3),</li>
+        <li>Google ranks https sites better than http ones, so make sure you install an SSL certificate,</li>
+        <li>Your website should have at least 10 pictures and make sure you tag them right, through alt-tag,</li>
+        <li>Most of all write articles!</li>
+      </ul>
+      </blockquote>
+      <h2>Articles, pictures and tools</h2>
+      <p>If you interested in writing articles, make sure to read <a href="How-to-write-article-for-the-web.html" target="blank"> this article on writing for the web</a> on how to write one and use <a href="article-writing-tool.html" target="blank"> this article writing tool</a>. If you are searching for pictures, you can find a good article on <a href="Improve-your-website-design-free-photos.html" target="blank"> free pictures</a> with loads of websites with photos that are free to use and require no attribution rights. If you had already used any of these tools, resources and articles, please give us feedback on our <a href="contactus.html" target="blank"> contact us page</a>. We are dedicated to help your startup succeed and help you on entrepreneurship efforts.</p>
+
+
+
+
+          </div> <!--article-->
+        
+        </div><!--cardpanel-->
+      <div id="searchheader"></div>
+      <div id="cardsrow">
+        <div id="endofcards"></div>
+        </div> <!-- cardsrow-->
+
+      </div><!-- Row -->
+      </div><!--container --> 
+ 
+
+    <%- include partials/footer.ejs %>
+    <script src="/js/cardDisplay.js"></script>
+    
+        
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+  <%- include("partials/head", {
+    description: "This is our purpose and manifesto. We are gradually increasing the number of writers AKA Ninjas to deliver more quality content to you. Here are the contributors" , 
+    title: "About Us", 
+    image: "/images/logo_components_color_2x_web_48dp.png", 
+    href: "About.html", 
+    type: "website"
+}) %>
+
+  <%- include("partials/head_analytics") %>
+  
+  <body class="mdc-typography">
+    
+    <%- include partials/nav.ejs %>
+
+
+    <div class="container background">
+      <div class="row">
+
+        <%- include partials/FAB_search %> 
+      
+      <div class=card-panel>
+
+          <div class="article">
+
+        <h1>Manifesto</h1>
+        <p>After participating in and observing many startups, reading about the new entrepreneurship hype, we have came to the conclusion that entrepreneurship is fundamentally broken. and so we created ideaninja to help solve it.</p>
+        <h2>The numbers</h2>
+        <p>Numbers show that more than 90% of all startups fail. If that wasn't enough, research has shown that even-though information is more readily available than ever, the success rate hasn't changed significantly. As shown in the article reasons why startups fail, product - market fit, human resources, and marketing are still the main reasons startups fail. However the hype about entrepreneurship is heavily focused on other issues, like financing, partnerships and major innovation. The basics, like building a team for the job, creating a good product for the market and getting through to the client, continues to be less spoken of.</p>
+        <h2>The myth</h2>
+        <p>In the world of info-entertainment, entrepreneurship is described very poorly. Many shows give the impression that entrepreneurship is all about raising money, having loads of success and becoming a millionaire. However as previously discussed, the numbers show a very different reality. Entrepreneurship is more about, simplicity, testing assumptions, mitigating risk, and dealing with people. Getting the basics right, will go a long way.</p>
+        <h2>The equity hype</h2>
+        <p>I could never understand why some entrepreneurs are more eager to sell equity than their own product. It always seemed that, if you really believe in your business, you should keep as much of it as possible and finance its operations through sales. But the first question many entrepreneurs ask themselves is: how do we get funding ? The best source of financing is through sales. So it should really be: how can i sell more? Can you do it ?</p>
+        <h2>Ideaninja</h2>
+        <p>Ideaninja was founded to help the entrepreneur become successful. We write regularly on the blog, from time to time we build small tools to help you with the job, build training sessions and have services tailored to complement your company skills and help you grow. I hope you enjoy and find useful the contents you find in the website. If you share this vision, and want to collaborate, we would like to work with you</p>
+                  </div> <!--article-->
+        
+        </div><!--cardpanel-->
+        <div class="contibutor_title">
+          <h1>Contributors</h1>
+          </div>
+
+        <%- include("partials/contributor", {
+          image: "images/avatars/MTavatar.jpeg", 
+          title: "Miguel Teixeira", 
+          description: "Miguel has a degree in Marketing, he has an MBA and has worked in technology for almost 15 years.He has worked in several startup projects including Idea Ninja.", 
+          href: "http://www.linkedin.com/in/miguelteixeira/en", 
+        }) %>
+
+      <%- include("partials/contributor", {
+          image: "images/avatars/MRavatar.jpeg", 
+          title: "Mariana Rodrigues", 
+          description: "Mariana has a Master in Managementat ISCTE-IUL. She was an Marketing intern at IdeaNinja, focused on branding coordination and product development.", 
+          href: "https://www.linkedin.com/in/mariana-rodrigues-06859872", 
+        }) %>
+
+      <%- include("partials/contributor", {
+          image: "images/avatars/TRavatar.jpeg", 
+          title: "Tiago Rodrigues", 
+          description: "Tiago has a management degree at ISCTE-IUL, and was Marketing intern at IdeaNinja. He was also involved in YA Generation, an entrepreneurship association for college students.", 
+          href: "https://www.linkedin.com/in/tiagorodrigues96/", 
+        }) %>
+
+        <%- include("partials/contributor", {
+          image: "images/avatars/MGavatar.jpeg", 
+          title: "Mariana da Silva Godinho", 
+          description: "Mariana is currently taking a Journalism degree at ESCS (Instituto Politécnico de Lisboa) and was a trainee at IdeaNinja. She has been focused in Digital Marketing and Content Creation.", 
+          href: "https://www.linkedin.com/in/mariana-da-silva-godinho-0a7a23bb/", 
+        }) %>
+       <%- include("partials/contributor", {
+          image: "images/avatars/RNavatar.jpeg", 
+          title: "Raquel Nascimento", 
+          description: "Raquel has a management degree at ISCTE-IUL and was a Marketing Internship at Idea Ninja and was a board member of  YA Generation, an entrepreneurship association for college students.", 
+          href: "https://www.linkedin.com/in/raquelmnascimento", 
+        }) %>
+
+      <div id="searchheader"></div>
+      <div id="cardsrow">
+        <div id="endofcards"></div>
+        </div> <!-- cardsrow-->
+
+      </div><!-- Row -->
+      </div><!--container --> 
+ 
+
+    <%- include partials/footer.ejs %>
+    <script src="/js/cardDisplay.js"></script>
+    
+        
+  </body>
+</html>

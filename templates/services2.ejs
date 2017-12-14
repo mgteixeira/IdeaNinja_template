@@ -1,0 +1,84 @@
+<html>
+<html>
+  <%- include("partials/head", {
+    description: "" , 
+    title: "", 
+    image: "", 
+    href: "", 
+    type: ""
+}) %>
+  <%- include("partials/head_analytics") %>
+
+  <body class="mdc-typography">
+    
+    <%- include partials/nav.ejs %>
+
+    <div class="container background">
+      <div class="row">
+       
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large secondary-color ">
+            <i class="large material-icons">add</i>
+          </a>
+          <ul>
+            <li><a href="" >
+              <i class="material-icons">call</i>
+              Schedule Call</a></li>
+            <li><a href="mailto:contactus@ideaninja.io"> 
+              <i class="material-icons">email</i>
+              Send Email
+            </a></li>
+            <li><a href="http://www.hotmail.msn.com/secure/start?action=compose&to=contactus@ideaninja.io">
+              <i class="material-icons">email</i>
+              Send Hotmail
+            </a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=contactus@ideaninja.io ">
+              <i class="material-icons">email</i>
+              Send Gmail
+              </a>
+            </li>
+          </ul>
+        </div><!--fixed-action-btn-->
+
+
+
+
+      <div class=card-panel>
+
+        <h1>Heading h1</h1>
+        <h2>Heading h2</h2>
+        <h3>Heading h3</h3>
+        <h4>Heading h4</h4>
+        <p>paragraph</p>
+        <p class="flow-text"> flow-text paragraph</p>
+        <ul>
+          <li>ul il</li>
+        </ul>
+        <ol>
+          <li>ol li</li>
+        </ol>
+
+        <blockquote>
+        This is an example quotation that uses the blockquote tag.
+        </blockquote>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper justo id dolor fermentum malesuada. Nunc fringilla ullamcorper felis at vestibulum. Proin pellentesque elit at odio dignissim facilisis. Cras interdum scelerisque justo non lobortis. In vitae felis a enim eleifend vestibulum. Integer finibus iaculis sem sit amet tempus. Cras erat ipsum, sodales facilisis ex vel, dictum finibus dolor. Cras dignissim nunc at lacus vestibulum, a pharetra mi pulvinar. Vivamus vulputate mollis sem, ut dignissim ipsum viverra vel. Sed gravida faucibus leo, et consectetur quam bibendum nec. Duis erat quam, egestas a pellentesque in, porta in augue. Curabitur erat nulla, porta sed massa sed, imperdiet ornare dolor. Fusce in arcu leo. Proin dapibus elit at ullamcorper cursus.</p>
+
+        <img  style="width:100%" src="images/articles/basics_seo/crtl.jpg" alt="Why">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper justo id dolor fermentum malesuada. Nunc fringilla ullamcorper felis at vestibulum. Proin pellentesque elit at odio dignissim facilisis. Cras interdum scelerisque justo non lobortis. In vitae felis a enim eleifend vestibulum. Integer finibus iaculis sem sit amet tempus. Cras erat ipsum, sodales facilisis ex vel, dictum finibus dolor. Cras dignissim nunc at lacus vestibulum, a pharetra mi pulvinar. Vivamus vulputate mollis sem, ut dignissim ipsum viverra vel. Sed gravida faucibus leo, et consectetur quam bibendum nec. Duis erat quam, egestas a pellentesque in, porta in augue. Curabitur erat nulla, porta sed massa sed, imperdiet ornare dolor. Fusce in arcu leo. Proin dapibus elit at ullamcorper cursus.</p>
+        </div>         <!--cardpannel-->
+      <div id="searchheader"></div>
+      <div id="cardsrow">
+        <div id="endofcards"></div>
+        </div> <!-- cardsrow-->
+
+      </div><!-- Row -->
+    </div><!--container --> 
+ 
+    <%- include partials/footer.ejs %>
+    <script src="/js/cardDisplay.js"></script>
+  
+        
+  </body>
+</html>
