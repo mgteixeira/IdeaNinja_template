@@ -1,0 +1,43 @@
+.appcanvas{
+	.keywords{
+	float: right ;
+	}
+}
+.card-content {
+	form{
+		div{
+			margin-top: 20px; 
+
+			label{
+				/*width: 20%; 
+				border-style: solid; 
+				border-color: black; 
+				border-width: 1px; 
+				vertical-align: text-top;
+				*/
+			}
+			.artform_intxt {
+				/*width: 60%;*/
+				margin-bottom: 0px;
+			}
+			textarea{
+				/*width: 60%;*/
+				height: 5em;
+				font-size: 0.8em;
+			}
+			p{
+				font-size: 0.6em; 
+				display: inline-block;
+
+				margin-left: 30%; 
+				margin-bottom:20px;
+				/*width: 20%;
+				
+				border-style: solid; 
+				border-color: black; 
+				border-width: 1px; 
+				*/
+			}
+		}
+	}
+}

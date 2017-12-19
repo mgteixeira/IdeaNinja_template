@@ -1,9 +1,15 @@
+//trying to make this work
+require('jquery-hammerjs'); 
+
+
+// 
 ejs = require('ejs');
+EJS = ejs; 
 var data = require ('./data.js'); 
 articles = data.articles
 require ('./search.js'); 
 
-window.order = [ 2, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 , 19, 20, 21, 22, 23, 24]; 
+window.order = [ 28, 25, 2, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26,  13, 14, 15, 16, 17, 18 , 19, 20, 21, 22, 23, 24, 27]; 
 
 //console.log("cardDisplay"); 
 
@@ -63,6 +69,16 @@ window.rendercards = function rendercards (evento) {
 				} )//ejs.renderFile
 			)//before
 		}//add html
+
+	var addvideo = function () {
+	 	$("#endofcards").before(
+		ejs.render( cardparts.video, {
+				"title":arttitle, 
+				"description": artdescription, 
+				"href": arthref
+				} )//ejs.renderFile
+			)//before
+		}//add html
 	
 	if(evento.type === "load" && window.location.pathname !== "/" ) {}
 			else {
@@ -73,12 +89,29 @@ window.rendercards = function rendercards (evento) {
 		var popOrderfunc = function(card) {return card.id == orderid }
 		popOrder[orderid] =  articles.find(popOrderfunc)
 		//if case - article, tools, service, video
-		artdescription = popOrder[orderid].description;
-		artdescription = artdescription.substring(0,150) + "...";
-		arttitle = popOrder[orderid].title;
-		artimage = popOrder[orderid].image;
-		arthref = popOrder[orderid].href; 
-		addarticle()
+		console.log(
+		orderid
+		 + " " 
+		 + popOrder[orderid].type 
+		 + " " 
+		 + (popOrder[orderid].type == "article" ||popOrder[orderid].type == "tool")
+		 )
+
+		if(popOrder[orderid].type == "article" ||popOrder[orderid].type == "tool"){
+			artdescription = popOrder[orderid].description;
+			artdescription = artdescription.substring(0,150) + "...";
+			arttitle = popOrder[orderid].title;
+			artimage = popOrder[orderid].image;
+			arthref = popOrder[orderid].href; 
+			addarticle()
+			}
+		else {
+			artdescription = popOrder[orderid].description;
+			artdescription = artdescription.substring(0,150) + "...";
+			arttitle = popOrder[orderid].title;
+			arthref = popOrder[orderid].href; 
+			addvideo()
+			}
 		
 		i++
 	})//Each

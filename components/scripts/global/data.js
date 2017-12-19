@@ -263,10 +263,41 @@ exports.articles =  [
     "href":  "mentors_almost_everything_you_need.html",
     "type": "article", 
     "id": 24, 
-    "published": "", 
-    "modified_time": "", 
-    "expiration_time":"", 
     "html": "\n<h2>You can't know everything</h2>\n<p> In a startup there are many hats you need to fill in. Product Management, Marketing, Software Development, HR or Web design are some of the examples. Most probably you will find areas where you are not an expert, but due to cost and time restrictions you will need to tackle them yourself. Tackling a new area of knowledge is filled with hurdles and you may need guidance, and thus finding an expert that will serve as a mentor is gold. However, as always, there are a ton of resources online that will explain you how to do it.</p>\n<h2>Finding your mentors</h2>\n<p>First, navigating through a new skill is a hustle. And getting that first step right is so critical. Mentors can have a huge influence pointing you into the right direction. In other words, you need help finding good content and avoiding all of the bad advices and clutter that you can find on the web. In such moments, it is crucial to find a mentor. A mentor can be someone you know or anyone who has the knowledge you need and you can ask for directions. If it is someone you don't know, you can look for:</p>\n<ul>\n<li>Bloggers who are experts in the subject you are looking for,</li>\n<li>Top forums contributors - search for users with a lot of points or answers and try to get in contact with them,</li>\n<li>Authors of technical books and look for seminars that have been posted on YouTube.</li>\n</ul>\n<p>If it is someone you know, it can be a:</p>\n<ul>\n<li>Friend,</li>\n<li>Former co-worker,</li>\n<li>Teacher from college.</li>\n</ul>\n<p>Basically, an expert that will lead you into the right track. You may not have the luck of having someone that you can contact to give the guidance you need. In that case, you should consider getting online training. The right training can cost you as little as 25$ and it can be worth gold. You can also enter a mentoring program.</p>\n<img src=\"images/articles/mentors-need/free_advice.jpg\" id=\"articleimg\" alt=\"Advice Mentorship picture\">\n<h2>Be aware of how much you don't know</h2>\n<p class=\"quote\">\"<i>Real knowledge is to know the extend of one's ignorance</i>\", Confucious</p>\n<p>When tackling a new theme or area of knowledge, it is hard to clearly identify what your problems will be and what resources you may need. So, trying to anticipate them won't be a precise task, but you should do it anyway. Contact your mentors as soon as possible to clarify doubts and, most importantly, give you a framework you can work with.</p>\n<h2>Last piece of advice</h2>\n<p>Summing up, while creating a startup, you will find many new challenges. Several of those challenges will be new areas of knowledge. To steepen the learning curve, get a mentor. Try to come up with questions and themes as early as you can and pick the adult's brain as best as you can. Most importantly, get in the right path. It will save you a ton of pain.</p>\n"
+    }, 
+    {
+    "title":    "Article Writing Tool",
+    "description":   "This tool will help you write for the web. We have embeded in this tool rules to make your article ,compliant with best practices.",
+    "tags":     "Content, SEO, Marketing, bloging",
+    "image": "/images/logo/logo412x240.jpeg",
+    "href":  "article-writing-tool.html",
+    "type": "tool",
+    "id": 25
+    }, 
+    {
+    "title":    "Automatic Pitch Machine",
+    "description":   "4 Automatic selling pitches to sell your products and services. Get your pitch in two steps and we will deliver 4 pitches",
+    "tags":     "Pitch, sales, Marketing",
+    "image": "/images/logo/logo412x240.jpeg",
+    "href":  "automatic_pitch_machine.html",
+    "type": "tool",
+    "id": 26
+    }, 
+    {
+    "title":    "Business Idea Assement Tool",
+    "description":   "Do you have a business idea? Do you wish to know if it is any good ? Test here! This application will evaluate your business idea. From evaluating the market you are in, the market fit, the  competitive advantage, the growth potential and the barriers to enter and at the end present you with a final veridict. More then the result itself we take you through a journey to help you understand the ins and outs of your business idea.",
+    "tags":     "Entrepreneurship, ideation, strategy",
+    "image": "/images/logo/logo412x240.jpeg",
+    "href":  "business-idea.html",
+    "type": "tool",
+    "id": 27
+    }, 
+    {
+    "title": "IdeaNinja",
+    "description": "Brief presentation about IdeaNinja",
+    "href": "https://www.youtube.com/embed/U2peb27Na-s",
+    "type": "video",
+    "id": 28
     }
   ]; 
 

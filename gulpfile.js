@@ -21,7 +21,8 @@ var gulp = require('gulp'),
     ejs = require("gulp-ejs"),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    JpegRecompress = require('imagemin-jpeg-recompress');    robots = require('gulp-robots'),
+    JpegRecompress = require('imagemin-jpeg-recompress');    
+    robots = require('gulp-robots'),
     runSequence = require('run-sequence') ,
     clean = require('gulp-clean'),
     spawn = require('cross-spawn').spawn,
@@ -34,15 +35,20 @@ var gulp = require('gulp'),
 // VARIABLES
 
 var sources = {
-  js_main: 'components/scripts/global/script.js',
+  //js_main: 'components/scripts/global/script.js',
   js_global: 'components/scripts/global/*.js',
   js_cards: 'components/scripts/global/cardDisplay.js',
+  js_awt: 'components/scripts/tools/article_writer.js',
+  js_bi: 'components/scripts/tools/business_idea.js',
+  js_apm: 'components/scripts/tools/automatic_pitch_machine.js',
   sass: 'components/sass/style.scss',
   img: 'components/images/**/**/*.*',
   html: '*.html',
   parts: 'components/parts/**/*.*', 
   docs: 'components/docs/*.*',
-  fonts: 'components/fonts/**/*.*' 
+  fonts: 'components/fonts/**/*.*', 
+//  tools: 'components/scripts/tools/*.js',
+  materialize: 'components/scripts/*.js'
 //  models: 'model/*.json'
 };
 
@@ -70,7 +76,7 @@ gulp.task('start', start());
 // Default
 gulp.task('default', function(callback) {
   runSequence('start', 'clean',
-              ['ejs', 'images', 'compass', 'js_main', 'js_cards', 'parts', 'docs', 'fonts'],
+              ['ejs', 'images', 'compass', 'js_cards', 'parts', 'docs', 'fonts', 'js_awt', 'js_bi', 'js_apm' ,'js_materialize'],
               'html',
               ['robots', 'sitemap', 'connect'],
              'watch',
@@ -79,13 +85,17 @@ gulp.task('default', function(callback) {
 
 // Watch
 gulp.task('watch', function() {
-  gulp.watch(sources.js_global, ['js_main', 'js_cards']);
+  gulp.watch(sources.js_global, ['js_cards']);
+  gulp.watch(sources.js_awt, ['js_awt']);
+  gulp.watch(sources.js_bi, ['js_bi']);
+  gulp.watch(sources.js_apm, ['js_apm']);
   gulp.watch(['components/images/**/*.*','components/images/**/**/*.*'] , ['images']);
   gulp.watch('components/sass/**/*.scss', ['compass']);
 //  gulp.watch('components/sass/core/*.scss', ['compass']);
 //  gulp.watch('components/sass/style.scss', ['compass']);
   gulp.watch(sources.html, ['sitemap']);
   gulp.watch(sources.parts, ['parts']);
+//  gulp.watch(sources.tools, ['js_tools']);
   gulp.watch(sources.docs, ['docs']);
   gulp.watch(sources.fonts, ['fonts']);
   gulp.watch(['templates/*.ejs','templates/partials/*.ejs'], function() {
@@ -98,14 +108,19 @@ gulp.task('watch', function() {
 });
 
 // Js
-gulp.task('js_main',  function(){return js();});
+//gulp.task('js_main',  function(){return js();});
 gulp.task('js_cards',  function(){return js(sources.js_cards);});
+gulp.task('js_awt',  function(){return js(sources.js_awt);});
+gulp.task('js_bi',  function(){return js(sources.js_bi);});
+gulp.task('js_apm',  function(){return js(sources.js_apm);});
+gulp.task('js_tools',  function(){return tools();});
+gulp.task('js_materialize',  function(){return materialize();});
 
 // Parts
-gulp.task('parts',    function(){return parts();});
+gulp.task('parts', function(){return parts();});
 
 // docs
-gulp.task('docs',     function(){return docs();});
+gulp.task('docs',  function(){return docs();});
 
 // Fonts
 gulp.task('fonts', function(){return fonts();});
@@ -172,8 +187,19 @@ function js(source, cb){
       function (err) { if(err){console.log('error : ', err)}}
   )}
 
-
-
+// tools
+/*
+function tools(){
+  return gulp.src(sources.tools)
+             .on('error', gutil.log)
+             .pipe(gulp.dest(getOutput() + 'js/tools'));
+}*/
+// Materialize
+function materialize(){
+  return gulp.src(sources.materialize)
+             .on('error', gutil.log)
+             .pipe(gulp.dest(getOutput() + 'js'));
+}
 // parts
 function parts(){
   return gulp.src(sources.parts)
