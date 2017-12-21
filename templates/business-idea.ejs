@@ -1,7 +1,7 @@
 <html>
   <%- include("partials/head", {
     description: "Do you have a business idea? Do you wish to know if it is any good ? Test here! This application will evaluate your business idea. From evaluating the market you are in, the market fit, the  competitive advantage, the growth potential and the barriers to enter and at the end present you with a final veridict. More then the result itself we take you through a journey to help you understand the ins and outs of your business idea." , 
-    title: "Business Idea Assement Tool", 
+    title: "Business Idea Assessment Tool", 
     image: "/images/logo/logo412x240.jpeg", 
     href: "business-idea.html", 
     type: "Tool"
@@ -32,6 +32,7 @@
             <p>This tool is based on the article<a href="how_to_value_business_idea.html" target="blank">"How to value Business Ideas"</a></p>
             </div> <!--article-->
         </div><!--cardpanel-->
+          
 
           <div class="business_idea_tool col s12 feed">
                     <!-- Nav tabs -->
@@ -271,6 +272,13 @@
                         <span id="t-s"></span>.
                     </div> 
 
+                <div class="progbar">
+                  <h4>Progress Bar</h4> <span>This tool spans thru 5 forms. Here is your progress:</span>
+                  <div class="progress">
+                  <div class="determinate" id="bi_bar" style="width: 0%"></div>
+                  </div>
+                </div>
+                
             </div><!--business_idea_tool-->
 
       <div id="searchheader"></div>

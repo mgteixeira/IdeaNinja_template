@@ -269,7 +269,7 @@ exports.articles =  [
     "title":    "Article Writing Tool",
     "description":   "This tool will help you write for the web. We have embeded in this tool rules to make your article ,compliant with best practices.",
     "tags":     "Content, SEO, Marketing, bloging",
-    "image": "/images/logo/logo412x240.jpeg",
+    "image": "images/icons/article_writting_tool.png",
     "href":  "article-writing-tool.html",
     "type": "tool",
     "id": 25
@@ -278,25 +278,25 @@ exports.articles =  [
     "title":    "Automatic Pitch Machine",
     "description":   "4 Automatic selling pitches to sell your products and services. Get your pitch in two steps and we will deliver 4 pitches",
     "tags":     "Pitch, sales, Marketing",
-    "image": "/images/logo/logo412x240.jpeg",
+    "image": "images/icons/automatic_pitch_machine.png",
     "href":  "automatic_pitch_machine.html",
     "type": "tool",
     "id": 26
     }, 
     {
-    "title":    "Business Idea Assement Tool",
+    "title":    "Business Idea Assessment Tool",
     "description":   "Do you have a business idea? Do you wish to know if it is any good ? Test here! This application will evaluate your business idea. From evaluating the market you are in, the market fit, the  competitive advantage, the growth potential and the barriers to enter and at the end present you with a final veridict. More then the result itself we take you through a journey to help you understand the ins and outs of your business idea.",
     "tags":     "Entrepreneurship, ideation, strategy",
-    "image": "/images/logo/logo412x240.jpeg",
+    "image": "images/icons/business_idea_assessment_tool.png",
     "href":  "business-idea.html",
     "type": "tool",
     "id": 27
     }, 
     {
     "title": "IdeaNinja",
-    "description": "Brief presentation about IdeaNinja",
+    "description": "Welcome to IdeaNinja. Here is a brief presentation about what do we do.",
     "href": "https://www.youtube.com/embed/U2peb27Na-s",
-    "type": "video",
+    "type": "inst_video",
     "id": 28
     }
   ]; 

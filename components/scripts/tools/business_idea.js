@@ -171,23 +171,28 @@ function showMenu(){
     if(inputs["#m-1"] !== 0 && inputs["#m-2"] !== 0 && inputs["#m-3"] !== 0 && inputs["#m-4"] !== 0 && inputs["#m-5"] !== 0) {
         $("#fit_bar").removeClass("hidden"); 
         $("#marketnext").removeClass("hidden");
+        $("#bi_bar").css("width", "20%");
     }
     if(inputs["#f-6-1a"] !== 0 && inputs["#f-6-2a"] !== 0 && inputs["#f-6-3a"] !== 0 && inputs["#f-6-4a"] !==0 && inputs["#f-6-5a"] !== 0) {
         $("#competitive_bar").removeClass("hidden");
         $("#fitnext").removeClass("hidden");
+        $("#bi_bar").css("width", "40%");
     }
     if(inputs["#c-9"] !== 0 && typeof document.querySelector("input[name='c-7']:checked") !== undefined) {
         $("#growth_bar").removeClass("hidden"); 
         $("#competitivenext").removeClass("hidden");
+        $("#bi_bar").css("width", "60%");
     }
     if( (inputs["#g-1"] !== 0) && (inputs["#g-2"] !== 0) && (inputs["#g-3"] !== 0)) {
         $("#barriers_bar").removeClass("hidden"); 
         $("#grownext").removeClass("hidden");
+        $("#bi_bar").css("width", "80%");
     }
 
     if (inputs["#b-12"] !== 0){
         $("#score_bar").removeClass("hidden");
         $("#barriersnext").removeClass("hidden");
+        $("#bi_bar").css("width", "100%");
     }
 }; 
 
@@ -372,7 +377,7 @@ function valuemarketScore() {
 
 function fitScore() {
     return (inputs["#f-6-3a"]/100*5 + inputs["#f-6-1a"]/100*5 + inputs["#f-6-5a"]/100*5)/2.5 + 1;
-}
+    }
 
 
 function competitiveScore(){

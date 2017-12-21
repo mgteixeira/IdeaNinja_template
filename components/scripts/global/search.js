@@ -43,7 +43,7 @@ $('#search').submit(function(e){
 $('#searchmobile').submit(function(e){
   e.preventDefault()
   window.evento = e
-  console.log("searchmobile")
+  //console.log("searchmobile")
   //console.log(evento)
   //console loging the results
   let res = idx.search( $('#searchmobileinput').val() )
