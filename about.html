@@ -1,77 +1,112 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About Us| Idea Ninja</title>
-  <meta  name ="description" content ="This is our purpose and manifesto. We are gradually increasing the number of writers AKA Ninjas to deliver more quality content to you. Here are the contributors"/>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <title>About Us | Idea Ninja </title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/logo_solo_navbar.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.css?abc" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Idea Ninja" />
+    <meta property="fb:admins" content="100004593139385"/>
+    <meta name ="description" content = "This is our purpose and manifesto. We are gradually increasing the number of writers AKA Ninjas to deliver more quality content to you. Here are the contributors" />
+    <link rel="canonical" href= "https://ideaninja.io/About.html" />
+    <meta property="og:title" content= About Us | Idea Ninja />
+    <meta property="og:description" content= "This is our purpose and manifesto. We are gradually increasing the number of writers AKA Ninjas to deliver more quality content to you. Here are the contributors"/>
+    <meta property="og:url" content= "https://ideaninja.io/About.html" />
+    <meta property="og:image" content= "https://ideaninja.io/images/logo_components_color_2x_web_48dp.png" />
+    <meta property="og:type" content= website
 
-  <link rel="canonical" href="https//ideaninja.io/about.html">
-  <meta property="og:title" content="Contributors| Idea Ninja" />
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="This is our purpose and manifesto. We are gradually increasing the number of writers AKA Ninjas to deliver more quality content to you. Here are the contributors"/>
-  <meta property="og:url" content="https://ideaninja.io/about.html". />
-  <meta property="og:image" content="https://ideaninja.io/images/icons/favicon.ico" />
 
-  <link rel="stylesheet" href="css/style.css"/>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!--
+    #### head keys ####
+    description
+    title
+    image
+    href
+    type
 
-  ga('create', 'UA-62214302-1', 'auto');
-  ga('send', 'pageview');
+-->
 
-</script> 
-      <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon"/> 
+
+
+  <!--
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-62214302-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+-->
+
 </head>
-<body>
- <!--Like + share -->
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1575052359489385',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-  <header id="intro">
-    </article>
-        <nav id="nav">
-      <div class="navbar">
-        <div class="brand"><a href="index.html#bodyhome">Idea<span>Ninja</span></a></div>
-        <ul>
-          <li><a class="startup tools" href="tools.html"><span>Tools</span></a></li>
-          <li><a class="startup articles" href="articles.html"><span>Articles</span></a></li>
-          <li><a class="startup services" href="services.html"><span>Services</span></a></li>
-          <li><a class="startup about" href="about.html"><span>About Us</span></a></li>
-          <li><a class="startup contactus" href="contactus.html"><span>Contact Us</span></a></li>
+  
+  <body class="mdc-typography">
+    
+     <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo center">
+       
+         <img src="./images/logo/Final_Original_new.png" alt="Entrepreneur Dojo" id="logo_navbar"> 
+           <!--<img src="./images/logo/logo_solo_navbar.png" alt="Idea Ninja" id="logo_solo_navbar"> -->
+       </a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons" id="mmenu">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <form action="" id="search">
+              <div class="input-field">
+                <input  type="search" required id="searchinput">
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </li>
         </ul>
-      </div><!-- navbar -->
+        <ul class="side-nav" id="nav-mobile">
+          <li> 
+            <a>
+              <form id="searchmobile" action="">
+                <input  type="text" placeholder="Search" id="searchmobileinput" >
+              </form>
+            </a>
+          </li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
     </nav>
-  </header>
-<main id="wrapper">
-  <div class="scene" id="bodyhome">
-    
-    <article id="firsthomeblock">
-      <h1>About Us</h1>
-    </article>
-    <article id="articleblock"> 
 
-    
-      <div id="articlebody">
+
+    <div class="container background">
+      <div class="row">
+
+                <div class="fixed-action-btn">
+          <a class="btn-floating btn-large secondary-color " 
+          onclick="
+            if(window.innerWidth >992) {
+              $('#searchinput').focus();
+            }
+            else {
+              $('#mmenu').trigger('click')
+             $('#searchmobileinput').focus()
+                 }
+              ">
+            <i class="large material-icons">search</i>
+          </a>
+        </div> 
+      
+      <div class=card-panel>
+
+          <div class="article">
+
+        <h1>Manifesto</h1>
         <p>After participating in and observing many startups, reading about the new entrepreneurship hype, we have came to the conclusion that entrepreneurship is fundamentally broken. and so we created ideaninja to help solve it.</p>
         <h2>The numbers</h2>
         <p>Numbers show that more than 90% of all startups fail. If that wasn't enough, research has shown that even-though information is more readily available than ever, the success rate hasn't changed significantly. As shown in the article reasons why startups fail, product - market fit, human resources, and marketing are still the main reasons startups fail. However the hype about entrepreneurship is heavily focused on other issues, like financing, partnerships and major innovation. The basics, like building a team for the job, creating a good product for the market and getting through to the client, continues to be less spoken of.</p>
@@ -81,104 +116,174 @@
         <p>I could never understand why some entrepreneurs are more eager to sell equity than their own product. It always seemed that, if you really believe in your business, you should keep as much of it as possible and finance its operations through sales. But the first question many entrepreneurs ask themselves is: how do we get funding ? The best source of financing is through sales. So it should really be: how can i sell more? Can you do it ?</p>
         <h2>Ideaninja</h2>
         <p>Ideaninja was founded to help the entrepreneur become successful. We write regularly on the blog, from time to time we build small tools to help you with the job, build training sessions and have services tailored to complement your company skills and help you grow. I hope you enjoy and find useful the contents you find in the website. If you share this vision, and want to collaborate, we would like to work with you</p>
-      </div> <!--articlebody -->
-      </article><!--articleblock -->
+                  </div> <!--article-->
+        
+        </div><!--cardpanel-->
+        <div class="contibutor_title">
+          <h1>Meet the Ninjas</h1>
+          </div>
 
-      <div class="divide">
-        <br>
-      </div>
+                  <div class="col s12 m4 feed">
+              <div class="card large">
+                <div class="card-image">
+                  <img src= images/avatars/MTavatar.jpeg alt="Miguel Teixeira" >
+                  <span class="card-title">Miguel Teixeira</span>
+                  </div>
+                <div class="card-content" >
+                  <p>Miguel has a degree in Marketing, he has an MBA and has worked in technology for almost 15 years.He has worked in several startup projects including Idea Ninja.</p>
+                  </div>
+                <div class="card-action">
+                  <a href=http://www.linkedin.com/in/miguelteixeira/en target="blank" rel="nofollow">Linkedin Profile</a>
+                  </div>
+                </div>
+          </div>
 
-      <article id="firsthomeblock">
+<!--
+  image
+  title
+  description
+  href
+  -->
 
-      <h1>Contributors</h1>
-      <div id="toprow">
-      <p>We are gradually increasing the number of writers AKA Ninja contributors to deliver more quality content to your startup. Here are the contributors </p>
-      <p>To become a contributor read the <a href="how-to-published-in-Idea-Ninja.html" target="blank">gidelines and process to be published in Idea Ninja</a>.</p>
-      </div>
+                <div class="col s12 m4 feed">
+              <div class="card large">
+                <div class="card-image">
+                  <img src= images/avatars/MRavatar.jpeg alt="Mariana Rodrigues" >
+                  <span class="card-title">Mariana Rodrigues</span>
+                  </div>
+                <div class="card-content" >
+                  <p>Mariana has a Master in Managementat ISCTE-IUL. She was an Marketing intern at IdeaNinja, focused on branding coordination and product development.</p>
+                  </div>
+                <div class="card-action">
+                  <a href=https://www.linkedin.com/in/mariana-rodrigues-06859872 target="blank" rel="nofollow">Linkedin Profile</a>
+                  </div>
+                </div>
+          </div>
 
-    </article>
+<!--
+  image
+  title
+  description
+  href
+  -->
 
-     <article id="contributor">
-      <h1>Contributors</h1>
-      <h2> Miguel Teixeira</h2>
-      <img src="images/avatars/MTavatar.jpeg" alt="Miguel Teixeira">
-      <p id="shortdesc">
-        Miguel has a degree in Marketing, he has an MBA and has worked in technology for almost 15 years.<br>
-        He has worked in several startup projects including Idea Ninja.<br>
-        Currently he is freelancing and accepting projects as Front-end developer, Marketeer, Strategic Consultant, Project Manager.<br>
-        <a href="http://www.linkedin.com/in/miguelteixeira/en" target="_blank" rel="nofollow">Linkedin profile</a> <br>
-        </p>
-    </article>
-    <article id="contributor">
-      <h2> Mariana Rodrigues</h2>
-      <img src="images/avatars/MRavatar.jpeg"  alt="Mariana Rodrigues">
-      <p id="shortdesc">
-        Mariana has a degree in Management and is currently taking a master in Marketing at ISCTE-IUL. She was an Marketing intern at IdeaNinja, focused on branding coordination and product development.<br>
-        <a href="https://www.linkedin.com/in/mariana-rodrigues-06859872" target="_blank" rel="nofollow">Linkedin profile</a> <br>
-        </p>
-    </article>
-    <article id="contributor">
-      <h2> Tiago Rodrigues</h2>
-      <img src="images/avatars/TRavatar.jpeg"  alt="Tiago Rodrigues">
-      <p id="shortdesc">
-       Tiago is currently taking a management degree at ISCTE-IUL while at the same time being a Marketing intern at IdeaNinja. His main focus in the company is product and brand development He is also working as Innovation Manager at YA Generation, an entrepreneurship association for college students. <br>
-       <a href="https://www.linkedin.com/in/tiagorodrigues96/" target="_blank" rel="nofollow">Linkedin profile</a> <br>
-        </p>
-    </article>
-    <article id="contributor">
-      <h2> Mariana da Silva Godinho </h2>
-      <img src="images/avatars/MGavatar.jpeg" alt="Mariana Godinho">
-      <p id="shortdesc">
-        Mariana is currently taking a Journalism degree at ESCS (Instituto Politécnico de Lisboa) and is trainee at IdeaNinja. She has been focused in Digital Marketing and Content Creation. <br>
-        <a href="https://pt.linkedin.com/in/mariana-da-silva-godinho-0a7a23bb" target="_blank" rel="nofollow">Linkedin profile</a> <br>
-        </p>
-    </article>
+                <div class="col s12 m4 feed">
+              <div class="card large">
+                <div class="card-image">
+                  <img src= images/avatars/TRavatar.jpeg alt="Tiago Rodrigues" >
+                  <span class="card-title">Tiago Rodrigues</span>
+                  </div>
+                <div class="card-content" >
+                  <p>Tiago has a management degree at ISCTE-IUL, and was Marketing intern at IdeaNinja. He was also involved in YA Generation, an entrepreneurship association for college students.</p>
+                  </div>
+                <div class="card-action">
+                  <a href=https://www.linkedin.com/in/tiagorodrigues96/ target="blank" rel="nofollow">Linkedin Profile</a>
+                  </div>
+                </div>
+          </div>
 
-    <article id="contributor">
-      <h2> Raquel Nascimento</h2>
-      <img src="images/avatars/RNavatar.jpeg" alt="Raquel Nascimento">
-      <p id="shortdesc">
-        Raquel is currently taking a management degree at ISCTE-IUL and integrates a Marketing Internship at Idea Ninja..<br>
-         She is also working as Digital Content Manager at YA Generation, an entrepreneurship association for college students. In YA Generation she is responsible for an entrepreneurship blog.<br>
-        <a href="https://www.linkedin.com/in/raquelmnascimento" target="_blank" rel="nofollow">Linkedin profile</a> <br>
-        </p>
-    </article>
-      
-        <article id="contactus">
-      <h1>Contact Us</h1>
-      <p>Please feel free to participate. We want to hear from you. We want your feedback and input. <a href="contactus.html">contact us Here</a> </p>
-    </article>
-  </div><!-- bodyhome -->
-</main>
- <footer class="scene">
-  <article class="content">
-    <div id="socialmedia">
-     
-    <div class="fb-comments" data-href="http://ideaninja.io/contributors.html" data-colorscheme="dark" data-numposts="10"></div>
-  
-      <ul class="group">
-        <li><a href="https://twitter.com/idea_ninja"><img class="icon" src="images/socialmedia/twitter.png" alt="twitter idea ninja" /></a></li>
-        <li><a href="https://www.facebook.com/IdeaNinja.io"><img class="icon" src="images/socialmedia/facebook.png" alt="facebook idea ninja" /></a></li>
+<!--
+  image
+  title
+  description
+  href
+  -->
 
-        <li><a href="https://www.youtube.com/channel/UCsCPC0CjOZy4CRuNMvQp-kQ"><img class="icon" src="images/socialmedia/youtube.png" alt="icon for youtube" /></a></li>
+                  <div class="col s12 m4 feed">
+              <div class="card large">
+                <div class="card-image">
+                  <img src= images/avatars/MGavatar.jpeg alt="Mariana da Silva Godinho" >
+                  <span class="card-title">Mariana da Silva Godinho</span>
+                  </div>
+                <div class="card-content" >
+                  <p>Mariana is currently taking a Journalism degree at ESCS (Instituto Politécnico de Lisboa) and was a trainee at IdeaNinja. She has been focused in Digital Marketing and Content Creation.</p>
+                  </div>
+                <div class="card-action">
+                  <a href=https://www.linkedin.com/in/mariana-da-silva-godinho-0a7a23bb/ target="blank" rel="nofollow">Linkedin Profile</a>
+                  </div>
+                </div>
+          </div>
 
-       <li><a href="https://linkedin.com/company/idea-ninja"><img class="icon" src="images/socialmedia/linkedin.png" alt="linkedin idea ninja" /></a></li>
-      </ul>
-    </div>
-    <div id="terms">
-      <p>
-      <a href="termsofservice.html" target="blank"> Terms of Service</a>
-      &nbsp|&nbsp  
-      <a href="policyprivacy.html" target="blank"> Privacy Policy</a>
-      </p>
-      <p>Copyright 2015 - Idea Ninja, Unipessoal Lda</p>
-    </div>
-  </article>
-</footer>
+<!--
+  image
+  title
+  description
+  href
+  -->
+                 <div class="col s12 m4 feed">
+              <div class="card large">
+                <div class="card-image">
+                  <img src= images/avatars/RNavatar.jpeg alt="Raquel Nascimento" >
+                  <span class="card-title">Raquel Nascimento</span>
+                  </div>
+                <div class="card-content" >
+                  <p>Raquel has a management degree at ISCTE-IUL and was a Marketing Internship at Idea Ninja and was a board member of  YA Generation, an entrepreneurship association for college students.</p>
+                  </div>
+                <div class="card-action">
+                  <a href=https://www.linkedin.com/in/raquelmnascimento target="blank" rel="nofollow">Linkedin Profile</a>
+                  </div>
+                </div>
+          </div>
 
+<!--
+  image
+  title
+  description
+  href
+  -->
+
+      <div id="searchheader"></div>
+      <div id="cardsrow">
+        <div id="endofcards"></div>
+        </div> <!-- cardsrow-->
+
+      </div><!-- Row -->
+      </div><!--container --> 
+ 
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Connect with the Dojo</h5>
+              <a href="https://www.facebook.com/IdeaNinja.io" rel="nofollow" target="blank"><img class="socialfooter"src="images\socialmedia\facebook.png" alt="facebook social" ></a>
+              <a href="https://twitter.com/idea_ninja" rel="nofollow" target="blank"><img class="socialfooter"src="images\socialmedia\twitter.png" alt="twitter social"></a>
+              <a href="https://www.youtube.com/channel/UCsCPC0CjOZy4CRuNMvQp-kQ" rel="nofollow" target="blank"><img src="images\socialmedia\youtube.png" alt="youtube social" class="socialfooter"></a>
+              <a href="https://linkedin.com/company/idea-ninja" rel="nofollow" target="blank"><img src="images\socialmedia\linkedin.png" alt="linkedin social" class="socialfooter"></a>
+            </div>
+            <div class="col l3 s6">
+              <h5 class="white-text">Legal Stuff</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="terms_of_service.html">Terms of Service</a></li>
+                <li><a class="grey-text text-lighten-3" href="privacy_policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+            <div class="col l3 s6">
+              <h5 class="white-text">Other Stuff</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
+                <li><a class="grey-text text-lighten-3" href="services.html">Services</a></li>
+                <li><a class="grey-text text-lighten-3" href="publishing_guidelines.html">Join the Ninjas</a></li>
+                <li><a class="grey-text text-lighten-3" href="contactus.html">Contact Us</a></li>
+                </ul>
+              </div>
+           </div>
+         </div>
+
+          <div class="footer-copyright">
+            <div class="container">
+            © 2015 - Idea Ninja, Unipessoal, Lda
+            </div>
+          </div>
+        </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
+    <script src="/js/jquery.timeago.min.js"></script>
     
-        <script src="js/script.js?abc"></script>
+    <script src="/js/cardDisplay.js"></script>
     
-
-</body>
+        
+  </body>
 </html>

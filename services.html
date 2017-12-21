@@ -1,433 +1,232 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Startup Services | Idea Ninja</title>
-  <meta  name ="description" content ="Idea Ninja Resources will give you some of the best resources on the web to help you execute your startup dream."/>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <title>Services | Idea Ninja </title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/logo_solo_navbar.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.css?abc" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Idea Ninja" />
+    <meta property="fb:admins" content="100004593139385"/>
+    <meta name ="description" content = "IdeaNinja extends beyond articles and tools we also provide services to help you thrive" />
+    <link rel="canonical" href= "https://ideaninja.io/services.html" />
+    <meta property="og:title" content= Services | Idea Ninja />
+    <meta property="og:description" content= "IdeaNinja extends beyond articles and tools we also provide services to help you thrive"/>
+    <meta property="og:url" content= "https://ideaninja.io/services.html" />
+    <meta property="og:image" content= "https://ideaninja.io/images/logo_components_color_2x_web_48dp.png" />
+    <meta property="og:type" content= article
 
-  <link rel="canonical" href="https://ideaninja.io/services.html">
-  <meta property="og:title" content="Startup Resources | Idea Ninja" />
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Want to start a web based application, but we do not have technical founders Do you know how to develop or design a product ? Have you had bad experience with suppliers ? Have you tried to implement himself ? Most importantly: Is it efficient ?" />
-  <meta property="og:url" content="https://ideaninja.io/services.html" />
-   <meta property="og:image" content="https://ideaninja.io/images/icons/default.png" />
-     <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Idea Ninja" />
-  <meta property="fb:admins" content="100004593139385"/> 
 
-  <link rel="stylesheet" href="css/style.css"/>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<!--
+    #### head keys ####
+    description
+    title
+    image
+    href
+    type
+
+-->
+
+
+
+  <!--
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-62214302-1', 'auto');
-  ga('send', 'pageview');
+        ga('create', 'UA-62214302-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+-->
 
-</script>
-       <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon"/>  
 </head>
-<body>
- <!--Like + share -->
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1575052359489385',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
- <!-- servModal -->
-        <div class="modal fade" id="servModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Request for Contact</h4>
-                    </div>
-                    <div class="modal-body"></div>
-                    <form id="service_form">
-                      <fieldset>
-
-                        <div>
-                          <label for="companyname">Company or project name</label>  
-                          <div >
-                          <input id="companyname" type="text" autocomplete= "on" placeholder="Enter the name of the company or project here" required="">
-                          </div>
-                        </div>
-
-                        <div>
-                          <label for="contactname">Contact Name</label>  
-                          <div>
-                          <input  id="contactname" type="text" autocomplete= "on" placeholder="Contact Name" required="">
-                          </div>
-                        </div>                        
-
-                        <div>
-                          <label for="email">Contact Email</label>  
-                          <div>
-                          <input  id="email" name="email" type="text" autocomplete= "on" placeholder="Enter your email address here" required="">
-                          </div>
-                        </div>
-
-                        <div>
-                          <label for="preferedcontacttype">Perferred way of contact:</label>
-                          <div>                     
-                            <select  id="preferedcontacttype" >
-                              <option value="skype">Skype</option>
-                              <option value="hangouts">Hangouts</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <div>
-                          <label for="servicepackage">Service package desired:</label>
-                          <div>                     
-                            <select  id="servicepackage" >
-                              <option value="pd1">Product Development - Prototyping & MVP</option>
-                              <option value="pd2">Product Development - Process Definition</option>
-                              <option value="pd3">Product Development - IT Product Testing</option>
-                              <option value="mp1">Marketing Plan - Full Review</option>
-                              <option value="mp2">Marketing Plan - Review</option>
-                              <option value="mp3">Marketing Plan - Mentoring</option>
-                              <option value="bmp1">Business Model and Plan - Full Review</option>
-                              <option value="bmp2">Business Model and Plan - Mentoring</option>
-                              <option value="ad1">Auditing - Cost Accounting</option>
-                              <option value="ad2">Auditing - Inventory Analysis</option>
-                              <option value="ad3">Auditing - Process Efficiency Analysis</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Textarea -->
-                        <div>
-                          <label for="msg">Short description of the project</label>
-                          <div>                     
-                            <textarea id="msg" name="msg" cols="6" rows="6"></textarea>
-                          </div>
-                        </div>
-                                                <!-- Button -->
-                        <div>
-                          <label for="submit"></label>
-                          <div>
-                            <button id="submit" name="submit">Send Message</button>
-                          </div>
-                        </div>
-
-                      </fieldset>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-        </div>
- <!--End servModal-->
-  <header id="intro">
-    </article>
-        <nav id="nav">
-      <div class="navbar">
-        <div class="brand"><a href="index.html#bodyhome">Idea<span>Ninja</span></a></div>
-        <ul>
-          <li><a class="startup tools" href="tools.html"><span>Tools</span></a></li>
-          <li><a class="startup articles" href="articles.html"><span>Articles</span></a></li>
-          <li><a class="startup services" href="services.html"><span>Services</span></a></li>
-          <li><a class="startup about" href="about.html"><span>About Us</span></a></li>
-          <li><a class="startup contactus" href="contactus.html"><span>Contact Us</span></a></li>
-        </ul>
-      </div><!-- navbar -->
-    </nav>
-  </header>
-<main id="wrapper">
-  <div class="scene" id="bodyhome">
-    <article id="articleblock">
-      <h1>Startup Services</h1>
-      <div id="articlebody">
-        <p>Entrepreneurs are makers.  Research, Learn, Do is the process by which we all operate. Eventually we all need a little support. And let's face it, we are all biased when it comes to our business and a second opinion is often what you need to take your company or project to the next level.</p>
-        <p>At IdeaNinja, we understand that a  startup must be able to iterate. Our services are designed around that premise. We uphold a framework specifically for startups. We believe that being able to jump through a specific set of basic challenges, will go a long way making sure your startup is successful. At IdeaNinja, the price is set, duration is fixed and you know exactly what you are going to get.</p>
-
-        <h2 class="service_group" id="serv_pd">Product Development</h2>
-        <p>The number one reason why startups fail is bad product to market fit! Everyone needs a hand. We can either review your work or mentor you through the process of developing a kick ass product:</p>
-
-       <div class="serv_box">
-          <span>Prototyping & MVP</span>
-          <desc>Co-create a prototype that you can use both to test and improve yur solution as well as to specify scope to the development and design teams. Includes 10 screens of Low Fidelity Prototype(Wireframe) and Minimum Viable Product Definition.</desc>
-          <price>500€</price>
-          </div>
-
-        <div class="serv_box">
-          <span>Process Definition</span>
-          <desc>Co-create 5 processes to suport your product. Includes 5 Flowcharts.</desc>
-          <price>325€</price>
-          </div>
-
-        <div class="serv_box">
-          <span>IT Product Testing</span>
-          <desc>Test websites, aplications, webservices. Can be used with Agile Methodology and it includes Statistics and Test Sheets up to 125 steps (aproximately 25 functionalities)</desc>
-          <price>325€</price>
-          </div>
-        
-        <p>Here is some dummy examples of the work we will do for you:</p>
-        <ul>
-          <li>
-            <a target="blank" href="/docs/articlewriter.pdf"><img src="images/icons/services/document_example.png"></a>
-            <a target="blank" href="/docs/articlewriter.pdf">Prototyping & MVP</a>
-          </li>
-          <li>
-            <a target="blank" href="/docs/example_process.png"><img src="images/icons/services/document_example.png"></a>
-            <a target="blank" href="/docs/example_process.png">Process Definition</a>
-          </li>
-          <li>
-            <a target="blank" href="/docs/itproducttesting_example.pdf"><img src="images/icons/services/document_example.png"></a>
-            <a target="blank" href="/docs/itproducttesting_example.pdf">IT Product Testing</a>
-          </li>
-        </ul>
-
-
-         <div class="calltoaction">
-          <button data-toggle="modal" data-target="#servModal">Let's start doing Business</button>
-        </div>
-
-
-        <h2 class="service_group" id="serv_mp">Marketing Plan</h2>
-                <p>Sales are what makes or breaks a company, and from early on we can help you hit it out of the park. We can help you improve your marketing plan.</p>
-        
-                <p><strong>Packages</strong></p>
-        
-                <div class="packs">
-                  <div class="package_services">
-            <span class="title"><strong><u>Full Review</u></strong></span>
-            <div class="package_desc">
-              <p class="package_desc_p">All services included</p>
-              <span class="serv_price">300€</span>
-              </div>
-            </div>
-          
-          <div class="package_services">
-            <span class="title"><strong><u>Review</u></strong></span>
-            <div class="package_desc">
-              <p class="package_desc_p">Up to 4 services included</p>
-              <span class="serv_price">150€</span>
-              </div>
-            </div>
-
-          <div class="package_services">
-            <span class="title"><strong><u>Mentoring</u></strong></span>
-            <div class="package_desc">
-              <p class="package_desc_p">Chose 1 service</p>
-              <span class="serv_price">80€</span>
-              </div>
-            </div>
-          </div>
   
-
-
-        <p><strong>Services</strong></p>
-
-        <div class="servs">
-          
-          <div class="serv_list">
-            <span>Market Strategy</span>
-            <desc> Market stage identification, recommended strategies for that market stage.</desc>
-            </div>
-
-          <div class="serv_list">
-            <span>Segmentation & Influencers</span>
-            <desc>Market segment and persona's characterization and influencer identification.</desc>
-            </div>
-
-          <div class="serv_list">
-            <span>Competitive Benchmark</span>
-            <desc>Main Competitors analysis.</desc>
-            </div>
-          
-          <div class="serv_list">
-            <span>Differentiation & Parity Points</span>
-            <desc>Differentiation and parity point identification and understanding.</desc>
-            </div>
-
-          <div class="serv_list">
-            <span>Positioning & Targeting</span>
-            <desc>Target identification and how the product, price, distribution, communication are catered to meet the needs of your target's needs.</desc>
-            </div>
-
-          <div class="serv_list">
-            <span>Branding</span>
-            <desc>Emotional promisse, tone of voice.</desc>
-            </div>
-
-          <div class="serv_list">
-            <span>Pitch</span>
-            <desc>Develop and improve the pitch for your products.</desc>
-            </div>
-
-          <div class="serv_list">    
-            <span>Promotion Strategy</span>
-            <desc>Identify, plan and execute communicate.</desc>
-            </div>
-
-          <div class="serv_list">    
-            <span>Growth Hacking</span>
-            <desc>Growth model based on hypothesis testing.</desc>
-            </div>
-
-          </div>
-
-           <div class="calltoaction">
-          <button data-toggle="modal" data-target="#servModal">Let's start doing Business</button>
-        </div>
-
-
-          <h2 class="service_group" id="serv_bmp">Business Model and Plan</h2>
-          <p>Getting you business model right, undertanding the key decisions you need to make is something that companies dwell in the first couple of years. We want to help you speed up the process and save a few months.</p>
-          
-          <p><strong>Packages</strong></p>
-
-        <div class="packs">
-          <div class="package_services">
-            <span class="title"><strong><u>Full Review</u></strong></span>
-            <div class="package_desc">
-              <p class="package_desc_p">All services included</p>
-              <span class="serv_price">350€</span>
-              </div>
-            </div>
-
-          <div class="package_services">
-            <span class="title"><strong><u>Mentoring</u></strong></span>
-            <div class="package_desc">
-              <p class="package_desc_p">Chose 1 service</p>
-              <span class="serv_price">80€</span>
-              </div>
-            </div>
-          </div>
-
-          <p><strong>Services</strong></p>
-
-          <div class="servs">
-            
-            <div class="serv_list">    
-              <span>Business Model Canvas</span>
-              <desc>Framework that helps you answer some vey important questions about your business.</desc>
-              </div>
-
-            <div class="serv_list">    
-              <span>Assumption Mapping</span>
-              <desc>Identify the key assumptions made in your business plan.</desc>
-              </div>
-
-            <div class="serv_list">    
-              <span>Identify KPIs</span>
-              <desc>Identify which of the assumption are the most critical and turn them into KPIs.</desc>
-              </div>
-
-            <div class="serv_list">    
-              <span>Scenario & Stress Testing</span>
-              <desc>Scenario test your business plan to understand how each of the variables can make or break your business.</desc>
-              </div>
-
-            <div class="serv_list">    
-              <span>Investment Analysis</span>
-              <desc>Profitability analysis of your investment plans.</desc>
-              </div>
-
-            </div>
-
-             <div class="calltoaction">
-              <button data-toggle="modal" data-target="#servModal">Let's start doing Business</button>
-              </div>
-
-
-
-       <h2 class="service_group" id="serv_aud">Auditing</h2>
-        <p>You are up and running and it's time to setp it up a notch any of these services, will help you reach that notch further. </p>
-        
-        <div class="serv_box">
-          <span>Cost Accounting</span>
-          <desc>Identify profit margins by product. complete profit and loss report per product allocating  fixed costs to product lines/revenue streams.</desc>
-          <price>300€</price>
-          </div>
-
-        <div class="serv_box">
-          <span>Inventory Analysis</span>
-          <desc>Identify the perfect intentory order and order timmings to maximize your profits and service quality.</desc>
-          <price>100€</price>
-          </div>
-
-        <div class="serv_box">
-          <span>Process Efficiency Analysis</span>
-          <desc>Improve your processes to deliver on a larger scale, or simply standardize processes.</desc>
-          <price>100€</price>
-          </div>
-
-
-        <p>Here is some dummy examples of the work we will do for you:</p>
-        <ul>
-          <li>
-            <a target="blank" href="/docs/costaccountingaudit_example.pdf"><img src="images/icons/services/document_example.png"></a>
-            <a target="blank" href="/docs/costaccountingaudit_example.pdf">Cost Accounting</a>
-          </li>
-          <li>
-              <a target="blank" href="/docs/productinventoryanalysis_example.pdf"><img src="images/icons/services/document_example.png"></a>
-              <a target="blank" href="/docs/productinventoryanalysis_example.pdf">Inventory Analysis</a>
-          </li>
-          <li>
-            <a target="blank" href="/docs/operationalefficiencyanalysis_example.pdf"><img src="images/icons/services/document_example.png"></a>
-            <a target="blank" href="/docs/operationalefficiencyanalysis_example.pdf">Process Efficiency Analyis</a>
-          </li>
-        </ul>
+  <body class="mdc-typography">
+    
+     <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo center">
        
-       <div class="calltoaction">
-          <button data-toggle="modal" data-target="#servModal">Let's start doing Business</button>
-        </div>
+         <img src="./images/logo/Final_Original_new.png" alt="Entrepreneur Dojo" id="logo_navbar"> 
+           <!--<img src="./images/logo/logo_solo_navbar.png" alt="Idea Ninja" id="logo_solo_navbar"> -->
+       </a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons" id="mmenu">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <form action="" id="search">
+              <div class="input-field">
+                <input  type="search" required id="searchinput">
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </li>
+        </ul>
+        <ul class="side-nav" id="nav-mobile">
+          <li> 
+            <a>
+              <form id="searchmobile" action="">
+                <input  type="text" placeholder="Search" id="searchmobileinput" >
+              </form>
+            </a>
+          </li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
 
-        </div>
-    </article>
-        <article id="contactus">
-      <h1>Contact Us</h1>
-      <p>Please feel free to participate. We want to hear from you. We want your feedback and input. <a href="contactus.html">contact us Here</a> </p>
-    </article>
-  </div><!-- bodyhome -->
-</main>
- <footer class="scene">
-  <article class="content">
-    <div id="socialmedia">
-     
-    <div class="fb-comments" data-href="https://ideaninja.io/resources.html" data-colorscheme="dark" data-numposts="10"></div>
-  
-      <ul class="group">
-        <li><a href="https://twitter.com/idea_ninja"><img class="icon" src="images/socialmedia/twitter.png" alt="twitter idea ninja" /></a></li>
-        <li><a href="https://www.facebook.com/IdeaNinja.io"><img class="icon" src="images/socialmedia/facebook.png" alt="facebook idea ninja" /></a></li>
 
-        <li><a href="https://www.youtube.com/channel/UCsCPC0CjOZy4CRuNMvQp-kQ"><img class="icon" src="images/socialmedia/youtube.png" alt="icon for youtube" /></a></li>
+    <div class="container background">
+      <div class="row">
 
-       <li><a href="https://linkedin.com/company/idea-ninja"><img class="icon" src="images/socialmedia/linkedin.png" alt="linkedin idea ninja" /></a></li>
-      </ul>
-    </div>
-    <div id="terms">
-      <p>
-      <a href="termsofservice.html" target="blank"> Terms of Service</a>
-      &nbsp|&nbsp  
-      <a href="policyprivacy.html" target="blank"> Privacy Policy</a>
-      </p>
-      <p>Copyright 2015 - Idea Ninja, Unipessoal Lda</p>
-    </div>
-  </article>
-</footer>
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large secondary-color ">
+            <i class="large material-icons">add</i>
+          </a>
+          <ul>
+            <li><a href="contactus.html" >
+              <i class="material-icons">call</i>
+              Schedule Call</a></li>
+            <li><a href="mailto:contactus@ideaninja.io"> 
+              <i class="material-icons">email</i>
+              Send Email
+            </a></li>
+            <li><a href="http://www.hotmail.msn.com/secure/start?action=compose&to=contactus@ideaninja.io">
+              <i class="material-icons">email</i>
+              Send Hotmail
+            </a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=contactus@ideaninja.io ">
+              <i class="material-icons">email</i>
+              Send Gmail
+              </a>
+            </li>
+          </ul>
+        </div><!--fixed-action-btn-->
 
+ 
+
+          <div class="col s12 m4 feed">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images\icons\training.png">
+                  <span class="card-title">Training</span>
+                  </div>
+                <div class="card-content serv">
+                  <p>We provide training programs for incubators and entrepreneurship hubs around the world.</p>
+                  <blockquote><ul>
+                    <li>* We will custom build acceleration programs</li>
+                    <li>* We provide a framework to achieve  results during the trainning period</li>
+                    <li>* We can design specific deliverables along the trainning program</li>
+                  </ul></blockquote>
+                  </div>
+                <div class="card-action">
+                  <a href="/contactus.html">Setup a 15m meeting to discuss this further</a>
+                  </div>
+                </div>
+          </div>
+
+
+          <div class="col s12 m4 feed">
+              <div class="card ">
+                <div class="card-image">
+                  <img src="images\icons\mentorship.png">
+                  <span class="card-title">Mentorship</span>
+                  </div>
+                <div class="card-content serv">
+                  <p>We provide mentorship programs with diferent levels of complexity. From a simple review style mentorship, up to strategic debats, to full blown coaching programs.</p>
+                  <blockquote><ul>
+                    <li>* We have review programs, or lightweight mentorship programs</li>
+                    <li>* We have frameworks to help guide you through the hurdles of creating a successfull company</li>
+                    <li>* We will help you implement methodologies to improve your chance for success</li>
+                  </ul> </blockquote>
+                  </div>
+                <div class="card-action">
+                  <a href="/contactus.html">Setup a 15m meeting to discuss this further</a>
+                  </div>
+                </div>
+          </div>
+
+          <div class="col s12 m4 feed">
+              <div class="card ">
+                <div class="card-image">
+                  <img src="images\icons\speaking.png">
+                  <span class="card-title">Public Speaking</span>
+                  </div>
+                <div class="card-content serv">
+                  <p>We will give public speaches about entrepreneurship in general or any specific subject you see in articles in the website.</p>
+                  <blockquote><ul>
+                    <li>* Entrepreneurship in general</li>
+                    <li>* Marketing for a startup</li>
+                    <li>* Product Market Fit</li>
+                    <li>* Any other subject that is approached in the website</li>
+                  </ul> </blockquote>
+                  </div>
+                <div class="card-action">
+                  <a href="/contactus.html">Setup a 15m meeting to discuss this further</a>
+                  </div>
+                </div>
+            </div>
+
+      <div id="searchheader"></div>
+      <div id="cardsrow">
+        <div id="endofcards"></div>
+        </div> <!-- cardsrow-->
+
+      </div><!-- Row -->
+      </div><!--container --> 
+ 
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Connect with the Dojo</h5>
+              <a href="https://www.facebook.com/IdeaNinja.io" rel="nofollow" target="blank"><img class="socialfooter"src="images\socialmedia\facebook.png" alt="facebook social" ></a>
+              <a href="https://twitter.com/idea_ninja" rel="nofollow" target="blank"><img class="socialfooter"src="images\socialmedia\twitter.png" alt="twitter social"></a>
+              <a href="https://www.youtube.com/channel/UCsCPC0CjOZy4CRuNMvQp-kQ" rel="nofollow" target="blank"><img src="images\socialmedia\youtube.png" alt="youtube social" class="socialfooter"></a>
+              <a href="https://linkedin.com/company/idea-ninja" rel="nofollow" target="blank"><img src="images\socialmedia\linkedin.png" alt="linkedin social" class="socialfooter"></a>
+            </div>
+            <div class="col l3 s6">
+              <h5 class="white-text">Legal Stuff</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="terms_of_service.html">Terms of Service</a></li>
+                <li><a class="grey-text text-lighten-3" href="privacy_policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+            <div class="col l3 s6">
+              <h5 class="white-text">Other Stuff</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
+                <li><a class="grey-text text-lighten-3" href="services.html">Services</a></li>
+                <li><a class="grey-text text-lighten-3" href="publishing_guidelines.html">Join the Ninjas</a></li>
+                <li><a class="grey-text text-lighten-3" href="contactus.html">Contact Us</a></li>
+                </ul>
+              </div>
+           </div>
+         </div>
+
+          <div class="footer-copyright">
+            <div class="container">
+            © 2015 - Idea Ninja, Unipessoal, Lda
+            </div>
+          </div>
+        </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
+    <script src="/js/jquery.timeago.min.js"></script>
     
-        <script src="js/script.js?abc"></script>
+    <script src="/js/cardDisplay.js"></script>
     
-
-</body>
+        
+  </body>
 </html>
