@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     connect = require('gulp-connect'),
     gulpif = require('gulp-if'),
-    uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglify-es').default,
     minifyHTML = require('gulp-minify-html'),
     //concat = require( 'gulp-concat'),
     path = require('path'),
@@ -57,7 +57,7 @@ var output = {
   pro: 'builds/production/'
 };
 
-var production = false;
+var production = true;
 
 // THE EDITION STOPS HERE!
 // DON'T EDIT THE FOLLOWING CODE!

@@ -269,7 +269,7 @@ exports.articles =  [
     "title":    "Article Writing Tool",
     "description":   "This tool will help you write for the web. We have embeded in this tool rules to make your article ,compliant with best practices.",
     "tags":     "Content, SEO, Marketing, bloging",
-    "image": "images/icons/article_writting_tool.png",
+    "image": "images/icons/article_writting_tool.jpeg",
     "href":  "article-writing-tool.html",
     "type": "tool",
     "id": 25
@@ -278,7 +278,7 @@ exports.articles =  [
     "title":    "Automatic Pitch Machine",
     "description":   "4 Automatic selling pitches to sell your products and services. Get your pitch in two steps and we will deliver 4 pitches",
     "tags":     "Pitch, sales, Marketing",
-    "image": "images/icons/automatic_pitch_machine.png",
+    "image": "images/icons/automatic_pitch_machine.jpeg",
     "href":  "automatic_pitch_machine.html",
     "type": "tool",
     "id": 26
@@ -287,7 +287,7 @@ exports.articles =  [
     "title":    "Business Idea Assessment Tool",
     "description":   "Do you have a business idea? Do you wish to know if it is any good ? Test here! This application will evaluate your business idea. From evaluating the market you are in, the market fit, the  competitive advantage, the growth potential and the barriers to enter and at the end present you with a final veridict. More then the result itself we take you through a journey to help you understand the ins and outs of your business idea.",
     "tags":     "Entrepreneurship, ideation, strategy",
-    "image": "images/icons/business_idea_assessment_tool.png",
+    "image": "images/icons/business_idea_assessment_tool.jpeg",
     "href":  "business-idea.html",
     "type": "tool",
     "id": 27

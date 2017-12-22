@@ -22,7 +22,7 @@
     "gulp-minify-html": "^1.0.6",
     "gulp-robots": "^2.0.4",
     "gulp-sitemap": "^4.2.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^0.1.9",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.9",
     "hammerjs": "^2.0.8",

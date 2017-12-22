@@ -20,10 +20,10 @@ $('#search').submit(function(e){
   //console.log("search")
   //console.log(evento)
   //console loging the results
-  let res = idx.search( $('#searchinput').val())
+  var res = idx.search( $('#searchinput').val())
   //console.log(res)
   order = []
-  for (let i=0; i<res.length;  i++) {
+  for ( i=0; i<res.length;  i++) {
     order.push(res[i].ref)
     };//for
  $("div").remove('.feed')
@@ -46,10 +46,10 @@ $('#searchmobile').submit(function(e){
   //console.log("searchmobile")
   //console.log(evento)
   //console loging the results
-  let res = idx.search( $('#searchmobileinput').val() )
+  var res = idx.search( $('#searchmobileinput').val() )
   //console.log(res)
   order = []
-  for (let i=0; i<res.length;  i++) {
+  for ( i=0; i<res.length;  i++) {
   order.push(res[i].ref)
   };//for
  $("div").remove('.feed')
