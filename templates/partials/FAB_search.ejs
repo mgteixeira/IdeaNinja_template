@@ -1,6 +1,20 @@
         <div class="fixed-action-btn">
-          <a class="btn-floating btn-large secondary-color " 
-          onclick="
+          <a class="btn-floating btn-large secondary-color" 
+          onclick=" searchclick();
+         /*   if(window.innerWidth >992) {
+              $('#searchinput').focus();
+            }
+            else {
+              $('#mmenu').trigger('click')
+             $('#searchmobileinput').focus()
+                 }
+          */
+              ">
+            <i class="large material-icons">search</i>
+          </a>
+        </div>
+        <script type="text/javascript">
+          var searchclick = function () {
             if(window.innerWidth >992) {
               $('#searchinput').focus();
             }
@@ -8,7 +22,5 @@
               $('#mmenu').trigger('click')
              $('#searchmobileinput').focus()
                  }
-              ">
-            <i class="large material-icons">search</i>
-          </a>
-        </div>
+          }
+        </script>

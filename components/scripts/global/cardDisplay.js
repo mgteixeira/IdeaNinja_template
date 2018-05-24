@@ -55,7 +55,7 @@ window.rendercards = function rendercards (evento) {
 	var popOrder = {}
 
 	var addarticle = function () {
-		console.log("addarticle")
+		//console.log("addarticle")
 	 	$("#endofcards").before(
 		ejs.render( cardparts.article, {
 				"title":arttitle, 
@@ -67,7 +67,7 @@ window.rendercards = function rendercards (evento) {
 		}//add 
 
 	var addvideo = function () {
-		console.log("addvideo")
+		//console.log("addvideo")
 	 	$("#endofcards").before(
 		ejs.render( cardparts.video, {
 				"description": artdescription, 
@@ -77,7 +77,7 @@ window.rendercards = function rendercards (evento) {
 		}//add 
 
 	var addtool = function () {
-		console.log("addtool")
+		//console.log("addtool")
 		$("#endofcards").before(
 		ejs.render( cardparts.tool, {
 				"description": artdescription, 
@@ -88,7 +88,7 @@ window.rendercards = function rendercards (evento) {
 		}//add 
 
 	var addinstvideo = function () {
-		console.log("addinstvideo")
+		//console.log("addinstvideo")
 	 	$("#endofcards").before(
 		ejs.render( cardparts.institutional_video, {
 				"description": artdescription, 
@@ -115,7 +115,7 @@ window.rendercards = function rendercards (evento) {
 				arttitle = popOrder[orderid].title;
 				artimage = popOrder[orderid].image;
 				arthref = popOrder[orderid].href; 
-				console.log("article " + arttitle + artdescription + artimage + arthref)
+				//console.log("article " + arttitle + artdescription + artimage + arthref)
 				addarticle()
 				break;
 
@@ -123,7 +123,7 @@ window.rendercards = function rendercards (evento) {
 				artdescription = popOrder[orderid].description;
 				artdescription = artdescription.substring(0,150) + "...";
 				arthref = popOrder[orderid].href; 
-				console.log("video " + artdescription + arthref)
+				//console.log("video " + artdescription + arthref)
 				addvideo()
 				break; 
 
@@ -131,7 +131,7 @@ window.rendercards = function rendercards (evento) {
 				artdescription = popOrder[orderid].description;
 				artdescription = artdescription.substring(0,150) + "...";
 				arthref = popOrder[orderid].href; 
-				console.log("inst_video " + artdescription + arthref)
+				//console.log("inst_video " + artdescription + arthref)
 				addinstvideo()
 				break; 
 
@@ -140,7 +140,7 @@ window.rendercards = function rendercards (evento) {
 				artdescription = artdescription.substring(0,150) + "...";
 				artimage = popOrder[orderid].image;
 				arthref = popOrder[orderid].href; 
-				console.log("tool " + artdescription + arthref + artimage)
+				//console.log("tool " + artdescription + arthref + artimage)
 				addtool()
 				break;
 			}//switch

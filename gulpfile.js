@@ -170,18 +170,19 @@ function js(source, cb){
    pump([
       gulp.src(source, {read: false}),
       browserify({
-        insertGlobals : true,
+        insertGlobals : !isProd(),
         debug : !isProd(), 
         transform: [
           babelify.configure({
             extensions: [".jsx", ".js"],
 //            presets: ["env", "react"],
-            sourceMapsAbsolute: true
+            sourceMapsAbsolute: !isProd(), 
             })//babelify-configure
           ]//transform
         }),//browserify
-      gulp.dest(getOutput() + 'js'),
-      gulpif(isProd(), uglify())
+      gulpif(isProd(), uglify()),
+      gulp.dest(getOutput() + 'js')
+      //,gulpif(isProd(), uglify())
    ],
    cb,
       function (err) { if(err){console.log('error : ', err)}}
